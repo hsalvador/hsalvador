@@ -1,7 +1,53 @@
-body{
+html {
+  font-size: 16px; }
+
+body {
   font-family: 'Akagi Pro', helvetica, sans-serif;
   color: #333;
-}
+  padding: 22px;
+  font-weight: 100; }
 
-:root{
-}
+strong {
+  font-weight: 500; }
+
+.logo {
+  font-family: 'aller',sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #F15822; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4E4E4E; }
+
+h1 {
+  font-size: 1.25em;
+  text-align: center;
+  margin-bottom: 30px; }
+
+h2 {
+  font-size: 1.325em;
+  font-weight: 400;
+  color: #4E4E4E;
+  text-transform: uppercase;
+  letter-spacing: 0.5px; }
+
+.menu {
+  display: none;
+  margin-bottom: 20px; }
+
+.description {
+  text-align: center;
+  margin-bottom: 60px; }
+
+.project-element {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  margin-bottom: 40px; }
+  .project-element img {
+    margin-bottom: 10px; }
+  .project-element p {
+    color: #919191; }
+  .project-element h2 {
+    margin-bottom: 5px; }
