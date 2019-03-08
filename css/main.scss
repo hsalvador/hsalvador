@@ -111,6 +111,7 @@ h2{
 
   img{
     margin-bottom: $small;
+    border-radius: 2px;
   }
 
   p{
@@ -124,5 +125,32 @@ h2{
 
 footer{
   background-color: #f7f7f7;
-  padding: 22px;
+  padding: $medium;
+
+  p{
+    text-align: center;
+    font-size: 0.725em;
+  }
+
+  .social-media{
+    font-size: 1.5em;
+    margin-bottom: $medium;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr;
+    grid-gap: $medium;
+
+    .instagram{
+      justify-self: start;
+    }
+
+    .linkedin{
+      justify-self: end;
+    }
+
+    a{
+      text-decoration: none;
+      color: $secondary-grey;
+    }
+  }
 }
