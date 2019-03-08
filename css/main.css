@@ -5,6 +5,8 @@ body {
   font-family: 'Akagi Pro', helvetica, sans-serif;
   color: #333;
   font-weight: 100; }
+  body.thunderwear {
+    color: #79858E; }
 
 strong {
   font-weight: 500; }
@@ -32,12 +34,29 @@ h1 {
   font-size: 1.25em;
   text-align: center; }
 
-h2 {
-  font-size: 1.325em;
+h2, h3 {
   font-weight: 400;
   color: #4E4E4E;
   text-transform: uppercase;
   letter-spacing: 0.5px; }
+
+h2 {
+  font-size: 1.325em; }
+
+h3 {
+  font-size: 1.25em;
+  margin-bottom: 20px; }
+  h3:before {
+    content: "";
+    width: 40px;
+    border: 0.5px solid #4E4E4E;
+    display: block;
+    margin-bottom: 5px; }
+
+h4 {
+  font-size: 1.125em;
+  font-weight: 400;
+  color: #79858E; }
 
 .menu {
   display: -ms-grid;
@@ -64,20 +83,28 @@ h2 {
   margin-bottom: 40px;
   display: none; }
 
-.project-element {
-  display: -ms-grid;
-  display: grid;
-  text-align: center;
-  margin-bottom: 40px; }
-  .project-element a {
+.project-element, .project-header {
+  text-align: center; }
+  .project-element a, .project-header a {
     text-decoration: none; }
-  .project-element img {
+  .project-element img, .project-header img {
     margin-bottom: 10px;
     border-radius: 2px; }
-  .project-element p {
+  .project-element p, .project-header p {
     color: #919191; }
-  .project-element h2 {
+  .project-element h2, .project-header h2 {
     margin-bottom: 5px; }
+
+.project-element {
+  margin-bottom: 40px; }
+
+.project-header {
+  margin-bottom: 60px; }
+  .project-header .project-title {
+    margin-bottom: 40px; }
+
+.project-content {
+  margin-bottom: 40px; }
 
 footer {
   background-color: #f7f7f7;

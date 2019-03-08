@@ -1,3 +1,19 @@
+$primary-grey: #333333;
+$secondary-grey: #4E4E4E;
+$lighter-grey: #919191;
+$menu-grey-normal: #c6c6c6;
+$menu-grey-hover: #666666;
+
+$thunderwear-body-copy: #79858E;
+$base-accent-colour: #F15822;
+
+$tiny: 5px;
+$small: 10px;
+$medium-small: 20px;
+$medium: 30px;
+$medium-large: 40px;
+$large: 60px;
+
 html{
   font-size: 16px;
 }
@@ -6,6 +22,10 @@ body{
   font-family: 'Akagi Pro', helvetica, sans-serif;
   color: #333;
   font-weight: 100;
+
+  &.thunderwear{
+    color: $thunderwear-body-copy;
+  }
 }
 
 strong{
@@ -15,21 +35,6 @@ strong{
 p{
   line-height: 1.4;
 }
-
-$primary-grey: #333333;
-$secondary-grey: #4E4E4E;
-$lighter-grey: #919191;
-$menu-grey-normal: #c6c6c6;
-$menu-grey-hover: #666666;
-
-$base-accent-colour: #F15822;
-
-$tiny: 5px;
-$small: 10px;
-$medium-small: 20px;
-$medium: 30px;
-$medium-large: 40px;
-$large: 60px;
 
 header{
   padding: 22px 22px 22px 22px;
@@ -57,12 +62,34 @@ h1{
   text-align: center;
 }
 
-h2{
-  font-size: 1.325em;
+h2, h3{
   font-weight: 400;
-  color: #4E4E4E;
+  color: $secondary-grey;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+h2{
+  font-size: 1.325em;
+}
+
+h3{
+  font-size: 1.25em;
+  margin-bottom: $medium-small;
+
+  &:before{
+    content: "";
+    width: $medium-large;
+    border: 0.5px solid $secondary-grey;
+    display: block;
+    margin-bottom: $tiny;
+  }
+}
+
+h4{
+  font-size: 1.125em;
+  font-weight: 400;
+  color: $thunderwear-body-copy;
 }
 
 .menu{
@@ -100,11 +127,8 @@ h2{
   }
 }
 
-.project-element{
-  display: grid;
+.project-element, .project-header{
   text-align: center;
-  margin-bottom: $medium-large;
-
   a{
     text-decoration: none;
   }
@@ -121,6 +145,24 @@ h2{
   h2{
     margin-bottom: $tiny;
   }
+}
+
+.project-element{
+  margin-bottom: $medium-large;
+}
+
+.project-header{
+  margin-bottom: $large;
+  .project-title{
+    margin-bottom: $medium-large;
+  }
+  .excerpt{
+
+  }
+}
+
+.project-content{
+  margin-bottom: $medium-large;
 }
 
 footer{
