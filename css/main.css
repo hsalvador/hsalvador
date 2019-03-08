@@ -4,11 +4,19 @@ html {
 body {
   font-family: 'Akagi Pro', helvetica, sans-serif;
   color: #333;
-  padding: 22px;
   font-weight: 100; }
 
 strong {
   font-weight: 500; }
+
+p {
+  line-height: 1.4; }
+
+header {
+  padding: 22px 22px 22px 22px; }
+
+.wrapper {
+  padding: 0 22px; }
 
 .logo {
   font-family: 'aller',sans-serif;
@@ -22,8 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 1.25em;
-  text-align: center;
-  margin-bottom: 30px; }
+  text-align: center; }
 
 h2 {
   font-size: 1.325em;
@@ -33,21 +40,44 @@ h2 {
   letter-spacing: 0.5px; }
 
 .menu {
-  display: none;
-  margin-bottom: 20px; }
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  padding: 30px 0; }
+  .menu li {
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: 400; }
+    .menu li a {
+      text-decoration: none;
+      color: inherit;
+      color: #c6c6c6; }
+      .menu li a.active {
+        color: #666666; }
 
 .description {
   text-align: center;
-  margin-bottom: 60px; }
+  margin-bottom: 40px;
+  display: none; }
 
 .project-element {
   display: -ms-grid;
   display: grid;
   text-align: center;
   margin-bottom: 40px; }
+  .project-element a {
+    text-decoration: none; }
   .project-element img {
     margin-bottom: 10px; }
   .project-element p {
     color: #919191; }
   .project-element h2 {
     margin-bottom: 5px; }
+
+footer {
+  background-color: #f7f7f7;
+  padding: 22px; }

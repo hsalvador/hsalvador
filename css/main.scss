@@ -5,7 +5,6 @@ html{
 body{
   font-family: 'Akagi Pro', helvetica, sans-serif;
   color: #333;
-  padding: 22px;
   font-weight: 100;
 }
 
@@ -13,9 +12,16 @@ strong{
   font-weight: 500;
 }
 
+p{
+  line-height: 1.4;
+}
+
 $primary-grey: #333333;
 $secondary-grey: #4E4E4E;
 $lighter-grey: #919191;
+$menu-grey-normal: #c6c6c6;
+$menu-grey-hover: #666666;
+
 $base-accent-colour: #F15822;
 
 $tiny: 5px;
@@ -25,6 +31,13 @@ $medium: 30px;
 $medium-large: 40px;
 $large: 60px;
 
+header{
+  padding: 22px 22px 22px 22px;
+}
+
+.wrapper{
+  padding: 0 22px;
+}
 
 .logo{
   font-family: 'aller',sans-serif;
@@ -42,7 +55,6 @@ h1, h2, h3, h4, h5, h6{
 h1{
   font-size: 1.25em;
   text-align: center;
-  margin-bottom: $medium;
 }
 
 h2{
@@ -54,19 +66,48 @@ h2{
 }
 
 .menu{
-  display: none;
-  margin-bottom: $medium-small;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+
+  padding: $medium 0;
+
+  li{
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: 400;
+
+    a{
+      text-decoration: none;
+      color: inherit;
+      color: $menu-grey-normal;
+
+      &.active{
+        color: $menu-grey-hover;
+      }
+    }
+  }
 }
 
 .description{
   text-align: center;
-  margin-bottom: $large;
+  margin-bottom: $medium-large;
+  display: none;
+
+  p{
+    // padding: 0 $small;
+  }
 }
 
 .project-element{
   display: grid;
   text-align: center;
   margin-bottom: $medium-large;
+
+  a{
+    text-decoration: none;
+  }
 
   img{
     margin-bottom: $small;
@@ -79,4 +120,9 @@ h2{
   h2{
     margin-bottom: $tiny;
   }
+}
+
+footer{
+  background-color: #f7f7f7;
+  padding: 22px;
 }
