@@ -42,73 +42,317 @@ This is a project that started as a simple Javascript assignment, but I believed
         </div>
     </section>
     <section class="wrapper project-content">
-      <h3>Hypothesis</h3>
+      <h3>01. Hypothesis</h3>
       <p>If users can find out what clothing & accessories they are supposed to wear in an easy and intuitive way, their morning routine will be improved by minimizing decision making. Thus, subtracting from the users’ amount of daily cumulative non-heuristic decisions that result in decision fatigue and ensuring they are properly dressed to face the elements.</p>
     </section>
 
 
     <section class="wrapper project-content">
-      <h3>Research Objectives</h3>
+      <h3>02. Research Objectives</h3>
+      <ul>
+        <li>Validate hypothesis about the use of weather apps in relation to their morning routine.</li>
+        <li>Find missed opportunities or problems that potential users might have when checking the weather and preparing for the day.</li>
+      </ul>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Method</h3>
+      <h3>03. Method</h3>
+      <ol>
+        <li>Literature Review</li>
+        <li>Survey & Interviews</li>
+        <li>Synthesis & Analysis</li>
+        <li>Ideation & Concept Design</li>
+        <li>Prototyping</li>
+        <li>Usability Testing</li>
+      </ol>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Literature Review</h3>
+      <h3>04. Literature Review</h3>
+      <blockquote>An emerging body of science indicates that making decisions may possess negative ramifications for controlling ones’ behaviour and the quality of subsequent decisions. Evidence suggests that individuals experiencing decision fatigue demonstrate an impaired ability to make trade-offs, prefer a passive role in the decision making process, and often make choices that seem impulsive or irrational (Pignatiello, Martin, & Hickman, 2018).</blockquote>
+      <blockquote>Akin to muscle fatigue after exertion, humans deplete internal resources when performing acts of self-regulation, such as processing information to formulate a decision (Pignatiello et al., 2018).</blockquote>
+      <blockquote>According to Hirshleifer, Levi, Lourie & Teoh, evidence in the psychology suggests that decisions made under pressure, distraction or fatigue, tend to be made heuristically - that is, using quick cognitive processes, thus affecting the quality of these decisions.</blockquote>
+      <blockquote>Research also shows that awakening from sleep is followed by disrupted cerebral and cognitive functioning that lasts for at least the first half hour following awakening (Vallat, Meaner, Nicolar & Ruby, 2019).</blockquote>
+      <section class="tldr">
+        <p>Awaking is followed by disrupted cognitive functioning.</p>
+        <p>Low-quality decisions are made when cognitively impaired.</p>
+        <p>Non-heuristic decisions add up towards decision fatigue.</p>
+      </section>
+      <p class="literature-summary">Therefore, the literature review validates the assumption that removing the user’s cognitive process of looking at the temperature, processing the information and making the decision about what pieces of clothing and accessories they should wear is beneficial. Giving users an easy and intuitive way of picking their clothes will improve their morning routine and help ensuring that they won’t leave home under or overdressed.</p>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Survey</h3>
+      <h3>05. Survey</h3>
+      <p>An online survey was conducted with 20 Canadians from different regions within Canada, to gather quantitative data and identify different habits when checking the weather and planning what to wear on a daily basis.</p>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Interviews</h3>
+      <h3>06. Interviews</h3>
+      <p>Three interviews were conducted with potential users to gather qualitative data about their morning routine and identify problems or missed opportunities.</p>
 
       <h4>Weather & Morning Routine Facts</h4>
 
+      <p>Similarly to the survey, during the interviews, participants confirmed that checking the weather is one of their first activities right after waking up. Contrary to most participants, one interviewee stated that they don’t check the weather during the winter, because no matter the temperature they always grab the heaviest winter gear and that works fine.</p>
+
+      <q>If it’s middle of winter, I just put any heavy winter clothing. During any other season I check the weather and dress accordingly.</q>
+      <q>I wake up, get my phone, check the news, check Reddit, see how the temperature is and then I get up.</q>
+      <q>I like to see the breakdown hour by hour so I know exactly what I need to bring to survive the day.</q>
+
+
+
       <h4>What do you expect from weather apps? What do you think of the apps you currently use?</h4>
+      <p>Apart from expecting to see the temperature, some of the interviewees affirm to look at the UV index and consider sunscreen an important accessory.<br />Regarding how pleasant it is to use their current weather apps (70% of the survey respondents use The Weather Network), all participants agree that they’re slow and cluttered.</p>
+
+      <q>I expect to see wether or not it’s gonna rain. Oh, and I also check the UV index. It doesn’t really matter for clothing, but I do like to know if it’s extremely bad and I’m gonna need sunscreen.</q>
+      <q>There’s too much information. I just need to decide what I am going to wear but there is a lot of ads. Also, the breakdown of hourly or 36 hours is kinda confusing. </q>
+      <q>They’re slow, too much information I don’t need, like news, ads and other user’s content. I don’t need to see images of people’s sunflowers.</q>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Personas</h3>
+      <h3>07. Personas</h3>
+      <p>Based on the information gathered during the survey and interviews, three personas were created to guide the process of ideation and concept design & development.</p>
+
+      <div class="persona">
+        <figure>
+          <img src="https://placebear.com/100/100" alt="Young man" />
+          <h4><figcaption>Mark</figcaption></h4>
+        </figure>
+
+        <ul class="persona-demographics">
+          <li>35 years old</li>
+          <li>Male</li>
+          <li>Software Developer</li>
+          <li>Speaks binary and hex</li>
+        </ul>
+
+        <p class="persona-app-use">Checks the weather right after waking up</p>
+
+        <h5>Pain Points</h5>
+        <ul class="persona-pain-points">
+          <li>Has trouble waking up.</li>
+          <li>Very sleepy and slow in the morning, doesn’t make good decisions.</li>
+          <li>Forgets to bring accessories, especially in the winter — "man, how my forehead hurts!".</li>
+          <li>Walks 20 minutes between subway and work.</li>
+        </ul>
+      </div>
+
+      <div class="persona">
+        <figure>
+          <img src="https://placebear.com/100/100" alt="Middle-aged woman" />
+          <h4><figcaption>Pam</figcaption></h4>
+        </figure>
+
+        <ul class="persona-demographics">
+          <li>50 years old</li>
+          <li>Female</li>
+          <li>Sales Director</li>
+          <li>Not tech-savvy but likes productivity apps</li>
+        </ul>
+
+        <p class="persona-app-use">Quickly checks the weather before leaving home</p>
+
+        <h5>Pain Points</h5>
+        <ul class="persona-pain-points">
+          <li>Very fast-paced life.</li>
+          <li>Has to make several big decisions related to work through the day, is always looking for ways to minimize stress.</li>
+          <li>Good at morning routine, is never late.</li>
+          <li>Drives to the office and back home, doesn’t feel underdressed very often.</li>
+        </ul>
+      </div>
+
+      <div class="persona">
+        <figure>
+          <img src="https://placebear.com/100/100" alt="Young person" />
+          <h4><figcaption>Zoe</figcaption></h4>
+        </figure>
+
+        <ul class="persona-demographics">
+          <li>24 years old</li>
+          <li>Non-binary</li>
+          <li>Full-time student & Two part-time jobs</li>
+          <li>Tech-savvy, hardcore instagrammer</li>
+        </ul>
+
+        <p class="persona-app-use">Checks the weather when battling to wake up: "five more minutes…"</p>
+
+        <h5>Pain Points</h5>
+        <ul class="persona-pain-points">
+          <li>Studies a lot. Works a lot.</li>
+          <li>Can’t sleep — can’t wake up.</li>
+          <li>Tries to get ready in 20 minutes in the morning.</li>
+          <li>Usually forgets her umbrella.</li>
+          <li>Wishes she could have less decisions to make in a day, especially in the morning.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Insights</h3>
+      <h3>08. Insights</h3>
+
+      <p>Looking back at all the information so far, here’s what was discovered:</p>
+
+      <ol>
+        <li>The main reason people use weather apps is to decide what to wear.</li>
+        <li>People usually check the weather right after waking up.</li>
+        <li>People are not decision-making efficient right after waking up.</li>
+        <li>Although most people use weather apps everyday, they’re usually not properly dressed for the current weather.</li>
+        <li>The most used weather apps have too much information on them, are cluttered — and don’t actively help users make better decisions.</li>
+        <li>Making heuristic decisions in the morning add up towards cognitive overload throughout the day.</li>
+      </ol>
+
+      <p style="color:red">THIS PART NEEDS TO BE CHANGED!!!!!!!!!!!!!</p>
+      <p>How might we design a weather-app that effectively helps people o be prepared to face the weather while minimizing decision-making?</p>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Task Analysis Comparison</h3>
+      <h3>09. Task Analysis</h3>
+
+      <h4>Before</h4>
+      <p>This analysis was based on what most people described during the survey and interviews.</p>
+
+      <ol>
+        <li>Wake up</li>
+        <li>Get smartphone</li>
+        <li>Open weather app</li>
+        <li>Look at temperature</li>
+        <li>Decide appropriate clothes</li>
+        <li>Decide appropriate accessories</li>
+        <li>Pick clothes</li>
+      </ol>
+
+      <h4>After</h4>
+      <p>Proposed steps based on research hypothesis.</p>
+
+      <ol>
+        <li>Wake up</li>
+        <li>Get smartphone</li>
+        <li>Open Thunderwear</li>
+        <li>Look at temperature</li>
+        <li>Look at recommended clothes & accessories</li>
+        <li></li>
+        <li>Pick clothes</li>
+      </ol>
+
+      <div class="legend"><span></span> Decision-making task</div>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Ideation</h3>
+      <h3>10. Ideation</h3>
+      <p>At the start of my ideation session, I took some time to review the goals, insights and constraints set by the research so far. I, then, put those facts into post-its and did a session of Crazy 8’s and ended up with two solutions to be tested out.</p>
 
       <h4>Narrowing down</h4>
+      <p>Having sketched out Solutions 1 and 2, I decided to share the early concepts with some friends for input. As I thought, Solution 1 wasn’t quite getting there, because of being text-heavy. I, then decided to prototype Solution 2 - which relies solely on minimal weather info and the illustration.</p>
+      <p>Solution #2, you’re a winner, baby!</p>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Prototype - Iteration 1</h3>
+      <h3>11. Prototype - Iteration 1</h3>
+
+      <p style="color:red">Include explanation to why the breakpoitns</p>
+
+      <p>For the first prototype, I decided to interview a few friends to get a sense of the average breakpoint where one would decide to dress lighter or heavier.</p>
+      <p>The concept relies heavily on the Illustration so after identifying the breakpoints and the corresponding outfits one would choose, I started to work on creating the character. These are the breakpoints and their corresponding outfits (temperature in Celsius):</p>
+
+      <ul>
+        <li>
+          <figure>
+            <img src="https://placebear.com/150/250" alt="">
+            <figcaption>Less than -10º</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="https://placebear.com/150/250" alt="">
+            <figcaption>Between -10º and 0º</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="https://placebear.com/150/250" alt="">
+            <figcaption>Between 0º and 10º</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="https://placebear.com/150/250" alt="">
+            <figcaption>Between 10º and 20º</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="https://placebear.com/150/250" alt="">
+            <figcaption>More than 20º</figcaption>
+          </figure>
+        </li>
+      </ul>
+
+      <h4>First prototype iteration</h4>
+      <p>Having the breakpoints defined and the characters drawn (to the best of my illustration skills) it was time to put them on a mobile interface and show some users.</p>
+      <p>Because of limited time, I decided to make the first prototype leaner and test only the clothing aspect of the app and build on that later on — no accessories for now.</p>
+      <p>As the app relies on a quite simple interface, I decided to skip the high-fidelity wireframes and build a simple working prototype in Javascript.</p>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Test</h3>
+      <h3>12. Usability Testing</h3>
+      <p>Three usability testing sessions were run with friends that had also participated in the questionnaire. <br />The sessions were run in a Think Aloud format, where participants are instructed to share their thoughts as they execute the steps.</p>
 
       <h4>Tasks</h4>
+      <ul>
+        <li>Decide what you should wear according to the weather</li>
+        <li>Decide what you should wear in a specific city (-15º scenario)</li>
+        <li>Decide what you should wear in a specific city (-5º scenario)</li>
+        <li>Decide what you should wear in a specific city (5º scenario)</li>
+        <li>Decide what you should wear in a specific city (15º scenario)</li>
+        <li>Decide what you should wear in a specific city (25º scenario)</li>
+      </ul>
 
-      <h4>Steps Sample</h4>
+      <h4>Task Steps</h4>
+      <p>Imagine you’re leaving home to a meeting in Kingston. You have to figure our what kind of clothes to wear according to the current weather in that city.</p>
+
+      <ul>
+        <li>Open the Thunderwear app.</li>
+        <li>Tell the moderator what kind of clothes you should wear.</li>
+        <li>Select the city "Kingston".</li>
+      </ul>
 
       <h4>Recommendations</h4>
+      <p>Based on the findings, a list of recommendations to improve the usability of the app was created. <br />Some of them were already known, because the prototype was leaner than the anticipated concept. Nevertheless they were all valuable insights that will improve the app overtime.</p>
+
+      <ul>
+        <li>Improve the Illustrations of scenarios "Less than 0º" & "Less than 10º" — most participants found it hard to identify the clothing difference.</li>
+        <li>Add what accessories are needed (including sunscreen).</li>
+        <li>Start-up on current location.</li>
+        <li>Easy way to come back to current location.</li>
+        <li>Add rain and snow to illustrations to minimize reading.</li>
+      </ul>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Prototype - Iteration 2</h3>
+      <h3>13. Prototype - Iteration 2</h3>
+      <p>As a last step before the next development iteration (coming soon!), an improved User Interface was designed — this time with clear and better visual identity, incorporating a few of the recommendations from the usability testing sessions.</p>
+
+      <figure>
+        <img src="https://placebear.com/320/400" alt="">
+      </figure>
     </section>
 
     <section class="wrapper project-content">
-      <h3>Lessons learned & Next Steps</h3>
+      <h3>14. Limitations & Lessons learned</h3>
+      <p>At the end of every process, it is crucial to look at back at what worked well and what could have been better — the improvement of next iterations, and ensuring that we walk a path of continuous learning depend on it.
+Below are a few lessons learned throughout this design and development process, that I intend to do better next time:</p>
+
+      <ul>
+        <li><span>Acessibility - </span>The research and the concept lacked looking at accessibility.</li>
+        <li><span>Team Work -</span> Some stages of the process could have resulted in totally different ideas (probably better ones) if I had a team to collaborate with — especially at the stage of ideation and concept design.</li>
+        <li><span>Target Audience -</span>I wish I had had the time and resources to reach a broader audience with the questionnaire and survey. The usability tests were also very limited.</li>
+        <li><span>Literature Review -</span>There isn't a huge amount of data about how small decisions affect the bigger picture of decision-fatigue (most of the studies I found are from 2017-2018).</li>
+        <li><span>Target Audience -</span>Journey Maps would have helped communicate how Thunderwear impacts the mood and morning experience of the personas. Will plan more time to include them in the process next time.</li>
+        <li><span>Usability Testing -</span>A bigger usability testing for a concept such as this one is ultimately necessary — here I was limited by time and resources. Benchmarking Thunderwear against traditional weather apps mentioned on the survey to measure the performance of the user when choosing their outfit would be an interesting metric.<br />It would also be valuable to look at the broader picture — in a scenario where someone uses Thunderwear on a daily basis, how does the improvement of that morning decision affect the overall mood or cognitive performance throughout the day?<br />Are avid users forgetting less accessories and leaving home better prepared for the current weather?</li>
+      </ul>
+
+      <p class="section-summary">The UX Research behind Thunderwear was a fun process!<br />
+        Based on the latest testing and improved UI, I now have a full backlog of design and development tasks and will work on publishing a first version of Thunderwear on Google Play soon.<br />
+        Keep tuned!</p>
     </section>
 
 
