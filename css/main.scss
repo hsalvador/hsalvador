@@ -1,3 +1,5 @@
+@import "breakpoints.scss";
+
 $primary-grey: #333333;
 $secondary-grey: #4E4E4E;
 $lighter-grey: #919191;
@@ -28,6 +30,46 @@ body{
   }
 }
 
+.container{
+  padding-left: 22px;
+  padding-right: 22px;
+  margin: 0 auto;
+
+  @include respond-below(xs) {
+    &{
+      // background-color: red;
+    }
+  }
+
+  @include respond-above(xs) {
+    &{
+      max-width: map-get($container-max-widths, xs);
+      // background-color: pink;
+    }
+  }
+
+  @include respond-above(sm) {
+    &{
+      max-width: map-get($container-max-widths, sm);
+      // background-color: green;
+    }
+  }
+
+  @include respond-above(md) {
+    &{
+      max-width: map-get($container-max-widths, md);
+      // background-color: blue;
+    }
+  }
+
+  @include respond-above(lg) {
+    &{
+      max-width: map-get($container-max-widths, lg);
+      // background-color: yellow;
+    }
+  }
+}
+
 strong{
   font-weight: 500;
 }
@@ -37,25 +79,94 @@ p{
 }
 
 header{
-  padding: 22px 22px 22px 22px;
-}
+  padding: $medium;
 
-.wrapper{
-  padding: 0 22px;
-}
+  @include respond-above(sm){
+    padding: $medium-large;
+  }
 
-.logo{
-  font-family: 'aller',sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  text-transform: uppercase;
-  color: $base-accent-colour;
+  @include respond-above(md){
+    padding: $large;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+  }
+
+  .logo{
+    font-family: 'aller',sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    color: $base-accent-colour;
+  }
+
+  // MENU
+  // --------------------------------
+  .menu{
+    display: flex;
+    justify-content: center;
+
+    @include respond-above(md){
+      justify-content: flex-end;
+    }
+
+    li{
+      text-transform: uppercase;
+      font-size: 0.75em;
+      font-weight: 400;
+      padding: 0 $medium-small;
+
+      @include respond-above(sm){
+        font-size: 0.875em;
+      }
+
+      @include respond-above(md){
+        font-size: 1em;
+      }
+
+      &:first-child{
+          padding-left: 0;
+      }
+
+      &:last-child{
+          padding-right: 0;
+      }
+
+      a{
+        text-decoration: none;
+        color: inherit;
+        color: $menu-grey-normal;
+
+        &.active{
+          color: $menu-grey-hover;
+        }
+      }
+    }
+  }
+
+  h1{
+    margin-bottom: $medium-small;
+
+    @include respond-above(sm){
+      margin-bottom: $medium-large
+    }
+
+    @include respond-above(md){
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+  nav{
+    @include respond-above(md){
+      align-self: center;
+    }
+  }
 }
 
 h1, h2, h3, h4, h5, h6{
   color: $secondary-grey;
 }
-
 
 h1{
   font-size: 1.25em;
@@ -63,10 +174,10 @@ h1{
 }
 
 h2, h3{
-  font-weight: 400;
+  font-weight: 200;
   color: $secondary-grey;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
 }
 
 h2{
@@ -92,43 +203,77 @@ h4{
   color: $thunderwear-body-copy;
 }
 
-.menu{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-items: center;
 
-  padding: $medium 0;
 
-  li{
-    text-transform: uppercase;
-    font-size: 0.75em;
-    font-weight: 400;
-
-    a{
-      text-decoration: none;
-      color: inherit;
-      color: $menu-grey-normal;
-
-      &.active{
-        color: $menu-grey-hover;
-      }
-    }
-  }
-}
 
 .description{
   text-align: center;
   margin-bottom: $medium-large;
   display: none;
+}
 
-  p{
-    // padding: 0 $small;
+// PROJECT LIST
+// ----------------------------------------
+.project-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: $medium-large;
+  margin-bottom: $medium;
+
+  @include respond-above(sm) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $large;
+    margin-bottom: $medium-large;
+  }
+
+  @include respond-above(md) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $large;
+    margin-bottom: $large;
+  }
+
+  .project-element{
+    text-align: center;
+
+    @include respond-above(md) {
+      margin-bottom: 0;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    img{
+      margin-bottom: $small;
+      border-radius: 2px;
+
+      @include respond-below(xs) {
+        max-width: 250px;
+        height: auto;
+      }
+
+      @include respond-above(xs) {
+        max-width: 380px;
+        height: auto;
+      }
+
+      @include respond-above(sm){
+        max-width: 100%;
+        height: auto;
+      }
+
+    }
+
+    p{
+      color: $lighter-grey;
+    }
   }
 }
 
-.project-element, .project-header{
+.project-header{
   text-align: center;
+
   a{
     text-decoration: none;
   }
@@ -147,9 +292,7 @@ h4{
   }
 }
 
-.project-element{
-  margin-bottom: $medium-large;
-}
+
 
 .project-header{
   margin-bottom: $large;
