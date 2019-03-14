@@ -6,16 +6,15 @@
     <meta name="author" content="Henrique Salvador">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/zxr5ylh.css">
+    <link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-
     <link rel="stylesheet" href="./css/main.css">
   </head>
   <body class="thunderwear">
-    <header>
+    <header class="container">
       <!-- TO-DO: MENU -->
-      <h1 class="logo">Henrique Salvador</h1>
+      <h1 class="logo"><a href="/index.html">Henrique Salvador</a></h1>
 
       <nav>
         <ul class="menu">
@@ -28,7 +27,7 @@
     </header>
     <section class="project-header">
         <div class="project-title">
-          <img src="https://placebear.com/576/400" alt="Thunderwear app mockup">
+          <img src="https://placebear.com/2000/800" alt="Thunderwear app mockup">
           <div class="container">
             <h2>Thunderwear</h2>
             <p>UX Research & Design</p>
@@ -57,28 +56,31 @@ This is a project that started as a simple Javascript assignment, but I believed
 
     <section class="container project-content">
       <h3>03. Method</h3>
-      <ol>
-        <li>Literature Review</li>
-        <li>Survey & Interviews</li>
-        <li>Synthesis & Analysis</li>
-        <li>Ideation & Concept Design</li>
-        <li>Prototyping</li>
-        <li>Usability Testing</li>
+      <ol class="method-list">
+        <li><div class="box">Literature Review</div><i class="fas fa-arrow-down"></i></li>
+        <li><div class="box">Survey & Interviews</div><i class="fas fa-arrow-down"></i></li>
+        <li><div class="box">Ideation & Concept Design</div><i class="fas fa-arrow-down"></i></li>
+        <li><div class="box">Prototyping</div><i class="fas fa-arrow-down"></i></li>
+        <li><div class="box">Usability Testing</div></li>
       </ol>
     </section>
 
-    <section class="container project-content">
-      <h3>04. Literature Review</h3>
-      <blockquote>An emerging body of science indicates that making decisions may possess negative ramifications for controlling ones’ behaviour and the quality of subsequent decisions. Evidence suggests that individuals experiencing decision fatigue demonstrate an impaired ability to make trade-offs, prefer a passive role in the decision making process, and often make choices that seem impulsive or irrational (Pignatiello, Martin, & Hickman, 2018).</blockquote>
-      <blockquote>Akin to muscle fatigue after exertion, humans deplete internal resources when performing acts of self-regulation, such as processing information to formulate a decision (Pignatiello et al., 2018).</blockquote>
-      <blockquote>According to Hirshleifer, Levi, Lourie & Teoh, evidence in the psychology suggests that decisions made under pressure, distraction or fatigue, tend to be made heuristically - that is, using quick cognitive processes, thus affecting the quality of these decisions.</blockquote>
-      <blockquote>Research also shows that awakening from sleep is followed by disrupted cerebral and cognitive functioning that lasts for at least the first half hour following awakening (Vallat, Meaner, Nicolar & Ruby, 2019).</blockquote>
-      <section class="tldr">
-        <p>Awaking is followed by disrupted cognitive functioning.</p>
-        <p>Low-quality decisions are made when cognitively impaired.</p>
-        <p>Non-heuristic decisions add up towards decision fatigue.</p>
+    <section class="project-content">
+      <div class="container">
+        <h3>04. Literature Review</h3>
+        <p>An emerging body of science indicates that making decisions may possess negative ramifications for controlling ones’ behaviour and the quality of subsequent decisions. Evidence suggests that individuals experiencing decision fatigue demonstrate an impaired ability to make trade-offs, prefer a passive role in the decision making process, and often make choices that seem  impulsive or irrational (Pignatiello, Martin, & Hickman, 2018).</p><br />
+        <p>Akin to muscle fatigue after exertion, humans deplete internal resources when performing acts of self-regulation, such as processing information to formulate a decision (Pignatiello et al., 2018).</p><br />
+        <p>According to Hirshleifer, Levi, Lourie & Teoh, evidence in the psychology suggests that decisions made under pressure, distraction or fatigue, tend to be made heuristically - that is, using quick cognitive processes, thus affecting the quality of these decisions.</p><br/>
+        <p>Research also shows that awakening from sleep is followed by disrupted cerebral and cognitive functioning that lasts for at least the first half hour following awakening (Vallat, Meaner, Nicolar & Ruby, 2019).</p><br />
+      </div>
+      <section class="tldr container">
+          <p class="box">Awaking is followed by disrupted cognitive functioning.</p>
+          <p class="box">Low-quality decisions are made when cognitively impaired.</p>
+          <p class="box">Non-heuristic decisions add up towards decision fatigue.</p>
       </section>
-      <p class="literature-summary">Therefore, the literature review validates the assumption that removing the user’s cognitive process of looking at the temperature, processing the information and making the decision about what pieces of clothing and accessories they should wear is beneficial. Giving users an easy and intuitive way of picking their clothes will improve their morning routine and help ensuring that they won’t leave home under or overdressed.</p>
+      <div class="container">
+        <p class="literature-summary">Therefore, the literature review validates the assumption that removing the user’s cognitive process of looking at the temperature, processing the information and making the decision about what pieces of clothing and accessories they should wear is beneficial. Giving users an easy and intuitive way of picking their clothes will improve their morning routine and help ensuring that they won’t leave home under or overdressed.</p>
+      </div>
     </section>
 
     <section class="container project-content">
@@ -100,7 +102,7 @@ This is a project that started as a simple Javascript assignment, but I believed
 
 
 
-      <h4>What do you expect from weather apps? What do you think of the apps you currently use?</h4>
+      <h4>Expectations & Current Apps</h4>
       <p>Apart from expecting to see the temperature, some of the interviewees affirm to look at the UV index and consider sunscreen an important accessory.<br />Regarding how pleasant it is to use their current weather apps (70% of the survey respondents use The Weather Network), all participants agree that they’re slow and cluttered.</p>
 
       <q>I expect to see wether or not it’s gonna rain. Oh, and I also check the UV index. It doesn’t really matter for clothing, but I do like to know if it’s extremely bad and I’m gonna need sunscreen.</q>
@@ -112,9 +114,9 @@ This is a project that started as a simple Javascript assignment, but I believed
       <h3>07. Personas</h3>
       <p>Based on the information gathered during the survey and interviews, three personas were created to guide the process of ideation and concept design & development.</p>
 
-      <div class="persona">
+      <div class="persona box">
         <figure>
-          <img src="https://placebear.com/100/100" alt="Young man" />
+          <img src="https://placebear.com/100/100" alt="Young man" class="persona-portrait"/>
           <h4><figcaption>Mark</figcaption></h4>
         </figure>
 
@@ -136,23 +138,49 @@ This is a project that started as a simple Javascript assignment, but I believed
         </ul>
       </div>
 
-      <div class="persona">
+      <div class="persona box">
         <figure>
-          <img src="https://placebear.com/100/100" alt="Middle-aged woman" />
+          <img src="https://placebear.com/100/100" alt="Middle-aged woman" class="persona-portrait"/>
           <h4><figcaption>Pam</figcaption></h4>
         </figure>
 
         <ul class="persona-demographics">
-          <li>50 years old</li>
-          <li>Female</li>
-          <li>Sales Director</li>
-          <li>Not tech-savvy but likes productivity apps</li>
+          <li>
+            <span>
+              <strong>Age:</strong>
+            </span>
+            <span>50 years old</span>
+          </li>
+          <li>
+            <span>
+              <strong>Gender:</strong>
+            </span>
+            <span>Female</span>
+          </li>
+          <li>
+            <span>
+              <strong>Occupation:</strong>
+            </span>
+            <span>Sales Director</span>
+          </li>
+          <li>
+            <span>
+              <strong>Tech:</strong>
+            </span>
+            <span>Not tech-savvy but likes productivity apps</span>
+          </li>
+          <li>
+            <span>
+              <strong>Weather app:</strong>
+            </span>
+            <span>Quickly checks the weather before leaving home</span>
+          </li>
         </ul>
 
-        <p class="persona-app-use">Quickly checks the weather before leaving home</p>
+        <p class="persona-app-use"></p>
 
-        <h5>Pain Points</h5>
         <ul class="persona-pain-points">
+          <h5>Pain Points</h5>
           <li>Very fast-paced life.</li>
           <li>Has to make several big decisions related to work through the day, is always looking for ways to minimize stress.</li>
           <li>Good at morning routine, is never late.</li>
@@ -160,9 +188,9 @@ This is a project that started as a simple Javascript assignment, but I believed
         </ul>
       </div>
 
-      <div class="persona">
+      <div class="persona box">
         <figure>
-          <img src="https://placebear.com/100/100" alt="Young person" />
+          <img src="https://placebear.com/100/100" alt="Young person" class="persona-portrait"/>
           <h4><figcaption>Zoe</figcaption></h4>
         </figure>
 

@@ -5,9 +5,14 @@ $secondary-grey: #4E4E4E;
 $lighter-grey: #919191;
 $menu-grey-normal: #c6c6c6;
 $menu-grey-hover: #666666;
+$grey-for-boxes: #F6F6F6;
 
 $thunderwear-body-copy: #79858E;
 $base-accent-colour: #F15822;
+$very-light-blue: #F7FBFF;
+$light-blue: #E6F9FF;
+$bright-blue: #10C4FD;
+$bright-green: #17BBB0;
 
 $tiny: 5px;
 $small: 10px;
@@ -15,6 +20,8 @@ $medium-small: 20px;
 $medium: 30px;
 $medium-large: 40px;
 $large: 60px;
+
+
 
 html{
   font-size: 16px;
@@ -28,6 +35,10 @@ body{
   &.thunderwear{
     color: $thunderwear-body-copy;
   }
+
+  // p:not(:last-child){
+  //   margin-bottom: $medium-small;
+  // }
 }
 
 .container{
@@ -74,8 +85,8 @@ strong{
   font-weight: 500;
 }
 
-p{
-  line-height: 1.4;
+p, li, blockquote, q{
+  line-height: 1.6;
 }
 
 header{
@@ -112,7 +123,7 @@ header{
 
     li{
       text-transform: uppercase;
-      font-size: 0.75em;
+      font-size: 0.875em;
       font-weight: 400;
       padding: 0 $medium-small;
 
@@ -137,7 +148,7 @@ header{
         color: inherit;
         color: $menu-grey-normal;
 
-        &.active{
+        &.active, &:hover{
           color: $menu-grey-hover;
         }
       }
@@ -154,6 +165,11 @@ header{
     @include respond-above(md){
       text-align: left;
       margin: 0;
+    }
+
+    a{
+      text-decoration: none;
+      color: inherit;
     }
   }
 
@@ -186,7 +202,7 @@ h2{
 
 h3{
   font-size: 1.25em;
-  margin-bottom: $medium-small;
+  margin-bottom: $medium;
 
   &:before{
     content: "";
@@ -200,10 +216,16 @@ h3{
 h4{
   font-size: 1.125em;
   font-weight: 400;
-  color: $thunderwear-body-copy;
+  margin: $medium-large 0 $medium-small 0;
 }
 
+.thunderwear h4{
+  color: $bright-green;
+}
 
+h5{
+  font-weight: 400;
+}
 
 
 .description{
@@ -242,11 +264,17 @@ h4{
 
     a{
       text-decoration: none;
+
+      &:hover> img{
+        box-shadow: 0px 0px 30px 0px #bbbbbb;
+      }
     }
 
     img{
       margin-bottom: $small;
       border-radius: 2px;
+      transition: all 0.8s;
+      position: relative;
 
       @include respond-below(xs) {
         max-width: 250px;
@@ -272,7 +300,7 @@ h4{
 }
 
 .project-header{
-  text-align: center;
+  text-align: left;
 
   a{
     text-decoration: none;
@@ -296,8 +324,13 @@ h4{
 
 .project-header{
   margin-bottom: $large;
+
   .project-title{
     margin-bottom: $medium-large;
+
+    img{
+      margin-bottom: $medium;
+    }
   }
   .excerpt{
 
@@ -305,8 +338,132 @@ h4{
 }
 
 .project-content{
-  margin-bottom: $medium-large;
+  margin-bottom: $large;
 }
+
+
+.method-list{
+  list-style-type: none;
+
+  li{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+    text-transform: uppercase;
+
+    i{
+      color: $base-accent-colour;
+    }
+  }
+}
+
+.tldr{
+  text-align: center;
+
+  .highlight-title{
+    font-weight: 600;
+    display: inline-block;
+    padding-top: $medium;
+    margin-bottom: $medium;
+  }
+
+  margin: $medium 0;
+  // background-color: $grey-for-boxes;
+}
+
+.box{
+  text-align: center;
+  justify-self: center;
+  display: inline-block;
+  background-color: $grey-for-boxes;
+  border-radius: 3px;
+  padding: $small $medium;
+  margin: $small;
+  min-width: 320px;
+  max-width: 330px;
+
+  &.persona{
+    background-color: $very-light-blue;
+  }
+}
+
+q{
+  display: inline-block;
+  margin-top: $medium;
+  padding-left: $small;
+  font-style: italic;
+  position: relative;
+
+  &:before{
+    content: "\“";
+    font-family: 'Coustard', serif;
+    font-style: normal;
+    position: absolute;
+    left: -10px;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    line-height: 0.7;
+    font-size: 7em;
+    color: $light-blue;
+  }
+}
+
+.persona{
+  margin-top: $large;
+  padding-top: 0;
+
+  img.persona-portrait{
+    border-radius: 50%;
+    position: relative;
+    margin-top: -10%;
+    box-shadow: 0px 0px 8px 0px $thunderwear-body-copy;
+  }
+
+  .persona-demographics{
+    margin-bottom: $small;
+    text-align: left;
+
+    li{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+      margin-bottom: $tiny;
+
+      span{
+        margin-right: $tiny;
+        // font-weight: 300;
+      }
+    }
+  }
+
+  .persona-app-use{
+    text-transform: uppercase;
+    font-size: 0.825em;
+    margin-bottom: $medium-small;
+  }
+
+  .persona-pain-points{
+    text-align: left;
+  }
+
+  h4{
+    margin-top: $small;
+  }
+
+  ul{
+    li{
+      line-height: inherit;
+    }
+  }
+
+}
+
+
+
+
+// ------------------------------------------- FOOTER
 
 footer{
   background-color: #f7f7f7;
