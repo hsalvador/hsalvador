@@ -291,32 +291,24 @@ This is a project that started as a simple Javascript assignment, but I believed
 
       <p>Proposed steps based on research hypothesis.</p>
 
-      <div class="before-after">
-        <div class="tasks-before">
-          <h4>Before</h4>
-          <ul class="task-list">
-            <li class="box">Wake up</li>
-            <li class="box">Get smartphone</li>
-            <li class="box">Open weather app</li>
-            <li class="box">Look at temperature</li>
-            <li class="box decision-task">Decide appropriate clothes</li>
-            <li class="box decision-task">Decide appropriate accessories</li>
-            <li class="box decision-task">Pick clothes</li>
-          </ul>
-        </div>
+      <ul class="task-list">
+        <li><h4>Before</h4></li>
+        <li class="box task-before">Wake up</li>
+        <li class="box task-before">Get smartphone</li>
+        <li class="box task-before">Open weather app</li>
+        <li class="box task-before">Look at temperature</li>
+        <li class="box task-before decision-task">Decide appropriate clothes</li>
+        <li class="box  task-before decision-task">Decide appropriate accessories</li>
+        <li class="box task-before decision-task">Pick clothes</li>
 
-        <div class="tasks-after">
-          <h4>After</h4>
-          <ul class="task-list">
-            <li class="box">Wake up</li>
-            <li class="box">Get smartphone</li>
-            <li class="box">Open Thunderwear</li>
-            <li class="box">Look at temperature</li>
-            <li class="box thunderwear-task">Look at recommended clothes & accessories</li>
-            <li class="box decision-task">Pick clothes</li>
-          </ul>
-        </div>
-      </div>
+        <li><h4>After</h4></li>
+        <li class="box">Wake up</li>
+        <li class="box">Get smartphone</li>
+        <li class="box">Open Thunderwear</li>
+        <li class="box">Look at temperature</li>
+        <li class="box thunderwear-task">Look at recommended clothes & accessories</li>
+        <li class="box decision-task">Pick clothes</li>
+      </ul>
 
       <ul class="legend">
         <li class="legend-item">
@@ -333,9 +325,9 @@ This is a project that started as a simple Javascript assignment, but I believed
     <section class="container project-content">
       <h3>10. Ideation</h3>
       <p>At the start of my ideation session, I took some time to review the goals, insights and constraints set by the research so far. I, then, put those facts into post-its and did a session of Crazy 8’s and ended up with two solutions to be tested out.</p>
-
       <h4>Narrowing down</h4>
-      <p>Having sketched out Solutions 1 and 2, I decided to share the early concepts with some friends for input. As I thought, Solution 1 wasn’t quite getting there, because of being text-heavy. I, then decided to prototype Solution 2 - which relies solely on minimal weather info and the illustration.</p>
+      <p>Having sketched out Solutions 1 and 2, I decided to share the early concepts with some friends for input. As I thought, Solution 1 wasn’t quite getting there, because of being text-heavy. I, then decided to prototype Solution 2 - which relies solely on minimal weather info and the illustration.</p><br />
+
       <p>Solution #2, you’re a winner, baby!</p>
     </section>
 
@@ -344,69 +336,69 @@ This is a project that started as a simple Javascript assignment, but I believed
 
       <p style="color:red">Include explanation to why the breakpoitns</p>
 
-      <p>For the first prototype, I decided to interview a few friends to get a sense of the average breakpoint where one would decide to dress lighter or heavier.</p>
+      <p>For the first prototype, I decided to interview a few friends to get a sense of the average breakpoint where one would decide to dress lighter or heavier.</p><br />
       <p>The concept relies heavily on the Illustration so after identifying the breakpoints and the corresponding outfits one would choose, I started to work on creating the character. These are the breakpoints and their corresponding outfits (temperature in Celsius):</p>
 
-      <ul>
-        <li>
+      <ul class="breakpoints-gallery">
+        <li class="box">
           <figure>
-            <img src="https://placebear.com/150/250" alt="">
+            <img src="https://placebear.com/250/250" alt="">
             <figcaption>Less than -10º</figcaption>
           </figure>
         </li>
-        <li>
+        <li  class="box">
           <figure>
-            <img src="https://placebear.com/150/250" alt="">
+            <img src="https://placebear.com/250/250" alt="">
             <figcaption>Between -10º and 0º</figcaption>
           </figure>
         </li>
-        <li>
+        <li class="box">
           <figure>
-            <img src="https://placebear.com/150/250" alt="">
+            <img src="https://placebear.com/250/250" alt="">
             <figcaption>Between 0º and 10º</figcaption>
           </figure>
         </li>
-        <li>
+        <li class="box">
           <figure>
-            <img src="https://placebear.com/150/250" alt="">
+            <img src="https://placebear.com/250/250" alt="">
             <figcaption>Between 10º and 20º</figcaption>
           </figure>
         </li>
-        <li>
+        <li class="box">
           <figure>
-            <img src="https://placebear.com/150/250" alt="">
+            <img src="https://placebear.com/250/250" alt="">
             <figcaption>More than 20º</figcaption>
           </figure>
         </li>
       </ul>
 
       <h4>First prototype iteration</h4>
-      <p>Having the breakpoints defined and the characters drawn (to the best of my illustration skills) it was time to put them on a mobile interface and show some users.</p>
-      <p>Because of limited time, I decided to make the first prototype leaner and test only the clothing aspect of the app and build on that later on — no accessories for now.</p>
+      <p>Having the breakpoints defined and the characters drawn (to the best of my illustration skills) it was time to put them on a mobile interface and show some users.</p><br />
+      <p>Because of limited time, I decided to make the first prototype leaner and test only the clothing aspect of the app and build on that later on — no accessories for now.</p><br />
       <p>As the app relies on a quite simple interface, I decided to skip the high-fidelity wireframes and build a simple working prototype in Javascript.</p>
     </section>
 
     <section class="container project-content">
       <h3>12. Usability Testing</h3>
-      <p>Three usability testing sessions were run with friends that had also participated in the questionnaire. <br />The sessions were run in a Think Aloud format, where participants are instructed to share their thoughts as they execute the steps.</p>
+      <p>Three usability testing sessions were run with friends that had also participated in the questionnaire. The sessions were run in a Think Aloud format, where participants are instructed to share their thoughts as they execute the steps.</p>
 
       <h4>Tasks</h4>
-      <ul>
-        <li>Decide what you should wear according to the weather</li>
-        <li>Decide what you should wear in a specific city (-15º scenario)</li>
-        <li>Decide what you should wear in a specific city (-5º scenario)</li>
-        <li>Decide what you should wear in a specific city (5º scenario)</li>
-        <li>Decide what you should wear in a specific city (15º scenario)</li>
-        <li>Decide what you should wear in a specific city (25º scenario)</li>
-      </ul>
+      <ol class="test-task-list">
+        <li>Decide what you should wear according to the weather.</li>
+        <li>Decide what you should wear in a specific city (-15º scenario).</li>
+        <li>Decide what you should wear in a specific city (-5º scenario).</li>
+        <li>Decide what you should wear in a specific city (5º scenario).</li>
+        <li>Decide what you should wear in a specific city (15º scenario).</li>
+        <li>Decide what you should wear in a specific city (25º scenario).</li>
+      </ol>
 
-      <h4>Task Steps</h4>
+      <h4>Task Steps Sample</h4>
       <p>Imagine you’re leaving home to a meeting in Kingston. You have to figure our what kind of clothes to wear according to the current weather in that city.</p>
 
       <ul>
-        <li>Open the Thunderwear app.</li>
-        <li>Tell the moderator what kind of clothes you should wear.</li>
-        <li>Select the city "Kingston".</li>
+        <li class="box">Open the Thunderwear app.</li>
+        <li class="box">Tell the moderator what kind of clothes you should wear.</li>
+        <li class="box">Select the city "Kingston".</li>
       </ul>
 
       <h4>Recommendations</h4>

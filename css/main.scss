@@ -209,7 +209,7 @@ h3{
 
   &:before{
     content: "";
-    width: $medium-large;
+    width: $medium;
     border: 0.5px solid $secondary-grey;
     display: block;
     margin-bottom: $tiny;
@@ -471,37 +471,31 @@ q{
 
 }
 
-.before-after{
+.task-list{
   display: grid;
+  grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;
-  grid-gap: $small;
+  grid-template-rows: repeat(8, 1fr);
 
+  grid-gap: $medium-small;
 
-  .task-list{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr);
-    grid-gap: $medium-small;
+  li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
 
-    li{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      line-height: 1.2;
+    &.decision-task{
+      background-color: $light-red;
+    }
 
-      &.decision-task{
-        background-color: $light-red;
-      }
-
-      &.thunderwear-task{
-        background-color: $light-green;
-      }
+    &.thunderwear-task{
+      background-color: $light-green;
     }
   }
-
   .thunderwear-task{
-    grid-row-start: 5;
-    grid-row-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 8;
   }
 
   h4{
@@ -552,6 +546,52 @@ q{
 }
 
 
+.breakpoints-gallery{
+  margin-top: $medium;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: $small;
+
+  li{
+    text-align: center;
+
+    &.box{
+      width: 80%;
+      padding: 0;
+    }
+
+    figure{
+      figcaption{
+        padding: $small;
+      }
+    }
+
+  }
+}
+
+.test-task-list{
+  list-style: none;
+  counter-reset: my-awesome-counter;
+
+  li{
+    counter-increment: my-counter;
+    position: relative;
+    padding: 4px 0 $medium $medium-large ;
+    line-height: 1;
+  }
+
+  li::before{
+    content: counter(my-counter);
+    color: $bright-blue;
+    font-size: 3em;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 600;
+  }
+}
 
 
 // ------------------------------------------- FOOTER
