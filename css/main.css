@@ -199,23 +199,63 @@ h5 {
       color: #919191; }
 
 .project-header {
-  text-align: left; }
-  .project-header a {
-    text-decoration: none; }
-  .project-header img {
-    margin-bottom: 10px;
-    border-radius: 2px; }
-  .project-header p {
-    color: #919191; }
-  .project-header h2 {
-    margin-bottom: 5px; }
+  background-color: pink;
+  height: 100%;
+  font-size: 0; }
 
-.project-header {
-  margin-bottom: 60px; }
-  .project-header .project-title {
-    margin-bottom: 40px; }
-    .project-header .project-title img {
-      margin-bottom: 30px; }
+.process-summary {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (1fr)[12];
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 20px; }
+  .process-summary li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 1.2; }
+  .process-summary .understand {
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+    -ms-grid-row-span: 6;
+    grid-row-end: 7; }
+  .process-summary .define {
+    -ms-grid-row: 7;
+    grid-row-start: 7;
+    -ms-grid-row-span: 2;
+    grid-row-end: 9; }
+  .process-summary .ideate {
+    -ms-grid-row: 9;
+    grid-row-start: 9;
+    -ms-grid-row-span: 1;
+    grid-row-end: 10; }
+  .process-summary .prototype {
+    -ms-grid-row: 10;
+    grid-row-start: 10;
+    -ms-grid-row-span: 1;
+    grid-row-end: 11; }
+  .process-summary .validate {
+    -ms-grid-row: 11;
+    grid-row-start: 11;
+    -ms-grid-row-span: 1;
+    grid-row-end: 12; }
+
+.project-summary {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .project-summary h2 {
+    margin-bottom: 20px; }
+  .project-summary h4 {
+    margin-bottom: 5px; }
 
 .project-content {
   margin-bottom: 60px; }
@@ -391,15 +431,17 @@ q {
     .breakpoints-gallery li figure figcaption {
       padding: 10px; }
 
-.test-task-list {
+.ordered-list {
   list-style: none;
   counter-reset: my-awesome-counter; }
-  .test-task-list li {
+  .ordered-list li {
     counter-increment: my-counter;
     position: relative;
-    padding: 4px 0 30px 40px;
-    line-height: 1; }
-  .test-task-list li::before {
+    padding: 3px 0 40px 40px;
+    line-height: 1.2; }
+    .ordered-list li:last-child {
+      padding-bottom: 0; }
+  .ordered-list li::before {
     content: counter(my-counter);
     color: #10C4FD;
     font-size: 3em;
@@ -408,6 +450,12 @@ q {
     top: 0;
     left: 0;
     font-weight: 600; }
+
+.task-sample {
+  text-align: center; }
+
+.recommendations-list, .lessons-learned-list, .section-summary {
+  margin-top: 30px; }
 
 footer {
   background-color: #f7f7f7;
