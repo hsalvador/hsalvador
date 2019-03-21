@@ -24,6 +24,7 @@ $medium-small: 20px;
 $medium: 30px;
 $medium-large: 40px;
 $large: 60px;
+$xl: 80px;
 
 
 
@@ -231,6 +232,16 @@ h5{
   font-weight: 400;
 }
 
+.card{
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  &:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+}
+
 
 .description{
   text-align: center;
@@ -389,7 +400,7 @@ h5{
 }
 
 .project-content{
-  margin-bottom: $large;
+  margin-bottom: $xl;
 }
 
 
@@ -548,6 +559,11 @@ q{
 
   h4{
     text-align: center;
+    border-bottom: 1px solid;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: $lighter-grey;
   }
 
   .box{
@@ -637,15 +653,7 @@ q{
   }
 }
 
-.card{
-  border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
-  &:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
-}
 
 .ordered-list{
   list-style: none;
@@ -678,7 +686,7 @@ q{
   text-align: center;
 }
 
-.prototype-gif{
+.prototype-gif, .prototype-2-img{
   margin: $medium auto 0 auto;
   display: block;
 }
