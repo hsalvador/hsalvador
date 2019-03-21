@@ -209,11 +209,11 @@ h2, h3{
 }
 
 h2{
-  font-size: 1.325em;
+  font-size: 2em;
 }
 
 h3{
-  font-size: 1.25em;
+  font-size: 1.75em;
   margin-bottom: $medium;
 
   &:before{
@@ -226,7 +226,7 @@ h3{
 }
 
 h4{
-  font-size: 1.125em;
+  font-size: 1.25em;
   font-weight: 400;
   margin: $medium-large 0 $medium-small 0;
   text-transform: uppercase;
@@ -238,6 +238,7 @@ h4{
 
 h5{
   font-weight: 400;
+  font-size: 1.25em;
 }
 
 .card{
@@ -389,9 +390,9 @@ h5{
 
 .project-summary{
   padding-top: $medium;
-  padding-bottom: $medium;
 
   h2{
+    margin-top: $small;
     margin-bottom: $medium-small;
     // text-align: center;
     // font-weight: 500;
