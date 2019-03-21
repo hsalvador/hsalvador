@@ -5,11 +5,23 @@
     <title>Henrique Salvador - UX Designer</title>
     <meta name="author" content="Henrique Salvador">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/zxr5ylh.css">
     <link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+
+
   </head>
   <body class="thunderwear">
     <header class="container">
@@ -154,7 +166,7 @@
       <h3>07. Personas</h3>
       <p>Based on the information gathered during the survey and interviews, three personas were created to guide the process of ideation and concept design & development.</p>
 
-      <div class="persona box">
+      <div class="persona card">
         <figure>
           <img src="https://placebear.com/700/300" alt="Young man" class="persona-portrait"/>
           <figcaption><h4 class="container">Mark</h4></figcaption>
@@ -204,7 +216,7 @@
         </div>
       </div>
 
-      <div class="persona box">
+      <div class="persona card">
         <figure>
           <img src="https://placebear.com/700/300" alt="Middle-aged woman" class="persona-portrait"/>
           <h4><figcaption>Pam</figcaption></h4>
@@ -256,7 +268,7 @@
         </div>
       </div>
 
-      <div class="persona box">
+      <div class="persona card">
         <figure>
           <img src="https://placebear.com/700/300" alt="Middle-aged woman" class="persona-portrait"/>
           <h4><figcaption>Zoe</figcaption></h4>
@@ -368,7 +380,29 @@
       <h4>Narrowing down</h4>
       <p>Having sketched out Solutions 1 and 2, I decided to share the early concepts with some friends for input. As I thought, Solution 1 wasn’t quite getting there, because of being text-heavy. I, then decided to prototype Solution 2 - which relies solely on minimal weather info and the illustration.</p><br />
 
-      <p>Solution #2, you’re a winner, baby!</p>
+
+      <div class="ideation-gallery">
+        <a href="./img/tw/Ideation-01.jpg" data-fancybox="ideation-gallery" data-caption="Ideation session">
+        	<img src="./img/tw/Ideation-01@0,38x.jpg" alt="Post-its with research notes, pencils and pens" />
+        </a>
+
+        <a href="./img/tw/Ideation-02.jpg" data-fancybox="ideation-gallery" data-caption="Ideation session">
+        	<img src="./img/tw/Ideation-02@0,38x.jpg" alt="Post-it with research notes, pencils and pens" />
+        </a>
+
+        <a href="./img/tw/Ideation-05.jpg" data-fancybox="ideation-gallery" data-caption="Ideation session">
+          <img src="./img/tw/Ideation-05@0,38x.jpg" alt="Post-it note on a monitor" />
+        </a>
+
+        <a href="./img/tw/Ideation-03.jpg" data-fancybox="ideation-gallery" data-caption="Wireframe Solution 1">
+        	<img src="./img/tw/Ideation-03@0,38x.jpg" alt="Wireframe sketch" />
+        </a>
+
+        <a href="./img/tw/Ideation-04.jpg" data-fancybox="ideation-gallery" data-caption="Wireframe Solution 1">
+        	<img src="./img/tw/Ideation-04@0,38x.jpg" alt="Wireframe sketch" />
+        </a>
+
+      </div>
     </section>
 
     <section class="container project-content">
@@ -380,35 +414,45 @@
       <p>The concept relies heavily on the Illustration so after identifying the breakpoints and the corresponding outfits one would choose, I started to work on creating the character. These are the breakpoints and their corresponding outfits (temperature in Celsius):</p>
 
       <ul class="breakpoints-gallery">
-        <li class="box">
-          <figure>
-            <img src="https://placebear.com/250/250" alt="">
-            <figcaption>Less than -10º</figcaption>
-          </figure>
+        <li class="card">
+          <a href="./img/tw/Bp01-lessThanMinusTen.jpg" data-fancybox="breakpoints-gallery" data-caption="Ideation session">
+            <figure>
+              <img src="./img/tw/Bp01-lessThanMinusTen@0,38x.jpg" alt="">
+              <figcaption>Less than -10º</figcaption>
+            </figure>
+          </a>
         </li>
-        <li  class="box">
-          <figure>
-            <img src="https://placebear.com/250/250" alt="">
-            <figcaption>Between -10º and 0º</figcaption>
-          </figure>
+        <li class="card">
+          <a href="./img/tw/Bp02-lessThanZero.jpg" data-fancybox="breakpoints-gallery" data-caption="Ideation session">
+            <figure>
+              <img src="./img/tw/Bp02-lessThanZero@0,38x.jpg" alt="">
+              <figcaption>Between -10º and 0º</figcaption>
+            </figure>
+          </a>
         </li>
-        <li class="box">
-          <figure>
-            <img src="https://placebear.com/250/250" alt="">
-            <figcaption>Between 0º and 10º</figcaption>
-          </figure>
+        <li class="card">
+          <a href="./img/tw/Bp03-lessThanTen.jpg" data-fancybox="breakpoints-gallery" data-caption="Ideation session">
+            <figure>
+              <img src="./img/tw/Bp03-lessThanTen@0,38x.jpg" alt="">
+              <figcaption>Between 0º and 10º</figcaption>
+            </figure>
+          </a>
         </li>
-        <li class="box">
-          <figure>
-            <img src="https://placebear.com/250/250" alt="">
-            <figcaption>Between 10º and 20º</figcaption>
-          </figure>
+        <li class="card">
+          <a href="./img/tw/Bp04-lessThanTwenty.jpg" data-fancybox="breakpoints-gallery" data-caption="Ideation session">
+            <figure>
+              <img src="./img/tw/Bp04-lessThanTwenty@0,38x.jpg" alt="">
+              <figcaption>Between 10º and 20º</figcaption>
+            </figure>
+          </a>
         </li>
-        <li class="box">
-          <figure>
-            <img src="https://placebear.com/250/250" alt="">
-            <figcaption>More than 20º</figcaption>
-          </figure>
+        <li class="card">
+          <a href="./img/tw/Bp05-moreThanTwenty.jpg" data-fancybox="breakpoints-gallery" data-caption="Ideation session">
+            <figure>
+              <img src="./img/tw/Bp05-moreThanTwenty@0,38x.jpg" alt="">
+              <figcaption>More than 20º</figcaption>
+            </figure>
+          </a>
         </li>
       </ul>
 
@@ -416,6 +460,8 @@
       <p>Having the breakpoints defined and the characters drawn (to the best of my illustration skills) it was time to put them on a mobile interface and show some users.</p><br />
       <p>Because of limited time, I decided to make the first prototype leaner and test only the clothing aspect of the app and build on that later on — no accessories for now.</p><br />
       <p>As the app relies on a quite simple interface, I decided to skip the high-fidelity wireframes and build a simple working prototype in Javascript.</p>
+
+      <img src="./img/tw/Prototype1-gif-v2-@0.5x.gif" alt="App mockup on a mobile phone" class="prototype-gif">
     </section>
 
     <section class="container project-content">
@@ -458,7 +504,7 @@
       <p>As a last step before the next development iteration (coming soon!), an improved User Interface was designed — this time with clear and better visual identity, incorporating a few of the recommendations from the usability testing sessions.</p>
 
       <figure>
-        <img src="https://placebear.com/320/400" alt="">
+        <img src="./img/tw/Group 106-small.jpg" data-fancybox alt="">
       </figure>
     </section>
 
@@ -490,6 +536,12 @@ Below are a few lessons learned throughout this design and development process, 
       </ul>
       <p>Designed and Developed by Henrique Salvador</p>
     </footer>
+
+    <!-- Fancybox -->
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <!--  Javascript -->
     <script src="js/main.js"></script>
   </body>
 </html>

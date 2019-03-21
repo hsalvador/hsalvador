@@ -593,28 +593,57 @@ q{
   }
 }
 
+.ideation-gallery{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  a{
+    padding: $small;
+    width: calc(50%);
+  }
+}
+
 
 .breakpoints-gallery{
   margin-top: $medium;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-gap: $small;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 
   li{
+    margin: $small;
+    width: calc(100% / 2 - (10px * 2));
     text-align: center;
 
-    &.box{
-      width: 80%;
-      padding: 0;
-    }
-
     figure{
+      padding-top: $small;
+
+      img{
+        border-bottom: 1px solid $grey-for-boxes;
+      }
+
       figcaption{
-        padding: $small;
+        padding: $small $small $medium-small $small;
       }
     }
 
+    a{
+      text-decoration: none;
+      color: $bright-green;
+    }
+  }
+}
+
+.card{
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  &:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
 }
 
@@ -647,6 +676,11 @@ q{
 
 .task-sample{
   text-align: center;
+}
+
+.prototype-gif{
+  margin: $medium auto 0 auto;
+  display: block;
 }
 
 .recommendations-list, .lessons-learned-list, .section-summary{
