@@ -11,10 +11,17 @@ $very-light-grey: #FEFEFE;
 $thunderwear-body-copy: #79858E;
 $base-accent-colour: #F15822;
 $very-light-blue: #F7FBFF;
+$light-yellow: #FFF7E6;
 $light-blue: #E6F9FF;
+$light-bright-blue: #02D6FD;
 $bright-blue: #10C4FD;
+$darker-blue: #4B7FFF;
 $bright-green: #17BBB0;
 $light-green: #e8fff3;
+
+$bright-yellow: #FFE684;
+$bright-red: #FF4142;
+
 
 $light-red: #FFEAEB;
 
@@ -222,6 +229,7 @@ h4{
   font-size: 1.125em;
   font-weight: 400;
   margin: $medium-large 0 $medium-small 0;
+  text-transform: uppercase;
 }
 
 .thunderwear h4{
@@ -605,6 +613,106 @@ q{
       display: flex;
       align-self: center;
       line-height: 0;
+    }
+  }
+}
+
+.survey{
+  h4{
+    color: $thunderwear-body-copy;
+  }
+
+  a{
+    margin-bottom: $small;
+    display: inline-block;
+  }
+
+  .survey-facts{
+    margin-top: $medium;
+    margin-bottom: $medium;
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    grid-gap: $large;
+
+    hr{
+      color: $bright-green;
+      border-color: inherit;
+    }
+
+    p{
+      line-height: 1.2;
+      font-weight: 400;
+      width: 80%;
+      // color: $bright-green;
+
+      .percentage{
+        color: $bright-green;
+        text-align: center;
+        line-height: 1;
+        display: block;
+        width: 100%;
+        font-size: 2.5em;
+        font-weight: 500;
+        // border-bottom: 1px solid;
+        margin-bottom: $tiny;
+      }
+
+      &:nth-child(2),&:nth-child(4){
+        .percentage{
+          // color: $bright-blue;
+          // text-align: right;
+        }
+      }
+
+      &:nth-child(2),&:nth-child(4){
+        // color: $bright-blue;
+        // text-align: right;
+      }
+    }
+  }
+
+  .summer, .winter{
+    padding-top: $medium;
+    padding-bottom: $medium;
+    margin: $medium 0 $medium 0;
+    border-radius: 3px;
+
+    i{
+      display: block;
+      text-align: center;
+      font-size: 2.5em;
+    }
+
+    p{
+      // text-align: center;
+      display: block;
+      margin-top: $medium-small;
+    }
+  }
+
+  .winter{
+    background-color: $light-blue;
+    // color: $secondary-grey;
+    i{
+      &:before{
+        background: -webkit-gradient(linear, left bottom, right top, from($light-bright-blue), to($darker-blue));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .summer{
+    background-color: $light-yellow;
+    // color: $secondary-grey;
+    i{
+      &:before{
+        background: -webkit-gradient(linear, left bottom, right top, from($bright-yellow), to($bright-red));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 }

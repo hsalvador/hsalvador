@@ -12,3 +12,10 @@ $('[data-fancybox="breakpoints-gallery"]').fancybox({
       "close"
     ],
 });
+
+$('[data-fancybox="survey-gallery"]').fancybox({
+  buttons: [
+      "zoom",
+      "close"
+    ],
+});

@@ -132,7 +132,8 @@ h3 {
 h4 {
   font-size: 1.125em;
   font-weight: 400;
-  margin: 40px 0 20px 0; }
+  margin: 40px 0 20px 0;
+  text-transform: uppercase; }
 
 .thunderwear h4 {
   color: #17BBB0; }
@@ -429,6 +430,69 @@ q {
       -ms-flex-item-align: center;
       align-self: center;
       line-height: 0; }
+
+.survey h4 {
+  color: #79858E; }
+
+.survey a {
+  margin-bottom: 10px;
+  display: inline-block; }
+
+.survey .survey-facts {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[4];
+  grid-template-rows: repeat(4, 1fr);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-gap: 60px; }
+  .survey .survey-facts hr {
+    color: #17BBB0;
+    border-color: inherit; }
+  .survey .survey-facts p {
+    line-height: 1.2;
+    font-weight: 400;
+    width: 80%; }
+    .survey .survey-facts p .percentage {
+      color: #17BBB0;
+      text-align: center;
+      line-height: 1;
+      display: block;
+      width: 100%;
+      font-size: 2.5em;
+      font-weight: 500;
+      margin-bottom: 5px; }
+
+.survey .summer, .survey .winter {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 30px 0 30px 0;
+  border-radius: 3px; }
+  .survey .summer i, .survey .winter i {
+    display: block;
+    text-align: center;
+    font-size: 2.5em; }
+  .survey .summer p, .survey .winter p {
+    display: block;
+    margin-top: 20px; }
+
+.survey .winter {
+  background-color: #E6F9FF; }
+  .survey .winter i:before {
+    background: -webkit-gradient(linear, left bottom, right top, from(#02D6FD), to(#4B7FFF));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
+.survey .summer {
+  background-color: #FFF7E6; }
+  .survey .summer i:before {
+    background: -webkit-gradient(linear, left bottom, right top, from(#FFE684), to(#FF4142));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 .ideation-gallery {
   display: -webkit-box;
