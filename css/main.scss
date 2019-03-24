@@ -331,7 +331,7 @@ h5{
 // ---------------------- PROJECT VIEW
 
 .project-header{
-  background-color: pink;
+  // background-color: pink;
   // height: 100%;
   font-size: 0;
 
@@ -352,63 +352,11 @@ h5{
   @include respond-below(xs){
     width: 100%;
   }
-  @include respond-below(sm){
+  @include respond-between(xs, sm){
     width: 80%;
     // width: 60%;
   }
 
-}
-
-.process-summary{
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(12, 1fr);
-
-  grid-gap: $medium-small;
-
-  li{
-    // div{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      line-height: 1.2;
-    // }
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // grid-template-rows: auto;
-    // text-align: center;
-    // text-transform: uppercase;
-    //
-    // i{
-    //   color: $base-accent-colour;
-    // }
-  }
-
-  .understand{
-    grid-row-start: 1;
-    grid-row-end: 7;
-  }
-
-  .define{
-    grid-row-start: 7;
-    grid-row-end: 9;
-  }
-
-  .ideate{
-    grid-row-start: 9;
-    grid-row-end: 10;
-  }
-
-  .prototype{
-    grid-row-start: 10;
-    grid-row-end: 11;
-  }
-
-  .validate{
-    grid-row-start: 11;
-    grid-row-end: 12;
-  }
 }
 
 .project-summary{
@@ -417,17 +365,58 @@ h5{
   h2{
     margin-top: $small;
     margin-bottom: $medium-small;
-    // text-align: center;
-    // font-weight: 500;
   }
 
   h4{
     margin-bottom: $tiny;
+    // border-bottom: 1px solid;
   }
 
-  .box{
-    // background-color: white;
-    // box-shadow: 1px 1px 4px 0.4px $menu-grey-normal;
+  .project-info{
+    margin-top: $medium-small;
+    padding-bottom: $medium-large;
+
+
+    .container{
+
+      @include respond-above(sm){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-gap-column: $medium;
+        grid-row-gap: $large;
+        text-align: center;
+      }
+
+      .process, .impact{
+        @include respond-above(sm){
+          grid-column-start: 1;
+          grid-column-end: 4;
+          // margin-top: $medium-small;
+          text-align: center;
+        }
+      }
+
+      .process{
+        background-color: $bright-green;
+        padding-bottom: $medium-large;
+
+        h4{
+          color: white;
+
+          @include respond-below(sm){
+            text-align: center;
+            padding: $medium 0 $medium-small 0;
+          }
+        }
+
+        .process-img{
+          @include respond-below(md){
+            padding: 0 $medium;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -483,83 +472,102 @@ h5{
   }
 }
 
-q{
+.interview-quotes{
+  margin: $medium 0;
   display: inline-block;
-  margin-top: $medium;
-  padding-left: $small;
-  font-style: italic;
-  position: relative;
 
-  &:before{
-    content: "\“";
-    font-family: 'Coustard', serif;
-    font-style: normal;
-    position: absolute;
-    left: -10px;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-    line-height: 0.7;
-    font-size: 7em;
-    color: $light-blue;
+  @include respond-above(sm){
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $medium-large;
+    text-align: center;
+  }
+
+  q{
+    display: inline-block;
+    margin-top: $medium;
+    padding-left: $small;
+    font-style: italic;
+    position: relative;
+
+    &:before{
+      content: "\“";
+      font-family: 'Coustard', serif;
+      font-style: normal;
+      position: absolute;
+      left: -10px;
+      margin: 0;
+      padding: 0;
+      z-index: -1;
+      line-height: 0.7;
+      font-size: 7em;
+      color: $light-blue;
+    }
   }
 }
 
-.persona{
-  margin-top: $large;
-  padding: 0 0 $medium 0;
+.personas-list{
+  .persona{
+    margin-top: $large;
+    padding: 0 0 $medium 0;
 
-  figure{
-    margin-bottom: $medium;
-  }
-
-  img.persona-portrait{
-    object-fit: cover;
-  }
-
-  .persona-demographics{
-    margin-bottom: $medium;
-    text-align: left;
-
-    li{
-      display: grid;
-      grid-template-columns: 30% 70%;
-      grid-template-rows: 1fr;
-      grid-gap: $small;
-      margin-bottom: $small;
+    @include respond-above(sm){
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 70%;
     }
-  }
-  .persona-pain-points{
-    text-align: left;
 
-    ul{
-      margin-top: $small;
-      // list-style: disc;
-      // list-style-position: inside;
+    figure{
+      margin-bottom: $medium;
+    }
 
-      li:not(:last-child){
+    img.persona-portrait{
+      object-fit: cover;
+    }
+
+    .persona-demographics{
+      margin-bottom: $medium;
+      text-align: left;
+
+      li{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 1fr;
+        grid-gap: $small;
         margin-bottom: $small;
       }
     }
-  }
+    .persona-pain-points{
+      text-align: left;
 
-  h4{
-    margin-top: $medium-small;
-    text-transform: uppercase;
-    text-align: center;
-    display: block;
-  }
+      ul{
+        margin-top: $small;
+        // list-style: disc;
+        // list-style-position: inside;
 
-  h5{
-    margin-bottom: $medium-small;
-  }
+        li:not(:last-child){
+          margin-bottom: $small;
+        }
+      }
+    }
 
-  ul{
-    li{
-      line-height: inherit;
+    h4{
+      margin-top: $medium-small;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+    }
+
+    h5{
+      margin-bottom: $medium-small;
+    }
+
+    ul{
+      li{
+        line-height: inherit;
+      }
     }
   }
-
 }
 
 .task-list{
@@ -649,6 +657,12 @@ q{
   a{
     margin-bottom: $small;
     display: inline-block;
+
+    img{
+      @include respond-above(sm){
+        max-width: 70%;
+      }
+    }
   }
 
   .survey-facts{
@@ -660,6 +674,13 @@ q{
     align-items: center;
     grid-gap: $large;
 
+    @include respond-above(sm){
+      margin-top: $large;
+      margin-bottom: $large;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+
     hr{
       color: $bright-green;
       border-color: inherit;
@@ -669,7 +690,6 @@ q{
       line-height: 1.2;
       font-weight: 400;
       width: 80%;
-      // color: $bright-green;
 
       .percentage{
         color: $bright-green;
@@ -679,63 +699,61 @@ q{
         width: 100%;
         font-size: 2.5em;
         font-weight: 500;
-        // border-bottom: 1px solid;
         margin-bottom: $tiny;
       }
+    }
+  }
 
-      &:nth-child(2),&:nth-child(4){
-        .percentage{
-          // color: $bright-blue;
-          // text-align: right;
+
+  .season-facts{
+    margin-top: $medium;
+
+    @include respond-above(sm){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $medium-large;
+      margin-top: $large;
+    }
+
+    .summer, .winter{
+      padding-top: $medium;
+      padding-bottom: $medium;
+      border-radius: 3px;
+
+      i{
+        display: block;
+        text-align: center;
+        font-size: 2.5em;
+      }
+
+      p{
+        // text-align: center;
+        display: block;
+        margin-top: $medium-small;
+      }
+    }
+
+    .winter{
+      background-color: $light-blue;
+      // color: $secondary-grey;
+      i{
+        &:before{
+          background: -webkit-gradient(linear, left bottom, right top, from($light-bright-blue), to($darker-blue));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
-
-      &:nth-child(2),&:nth-child(4){
-        // color: $bright-blue;
-        // text-align: right;
-      }
-    }
-  }
-
-  .summer, .winter{
-    padding-top: $medium;
-    padding-bottom: $medium;
-    margin: $medium 0 $medium 0;
-    border-radius: 3px;
-
-    i{
-      display: block;
-      text-align: center;
-      font-size: 2.5em;
     }
 
-    p{
-      // text-align: center;
-      display: block;
-      margin-top: $medium-small;
-    }
-  }
-
-  .winter{
-    background-color: $light-blue;
-    // color: $secondary-grey;
-    i{
-      &:before{
-        background: -webkit-gradient(linear, left bottom, right top, from($light-bright-blue), to($darker-blue));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-  }
-
-  .summer{
-    background-color: $light-yellow;
-    // color: $secondary-grey;
-    i{
-      &:before{
-        background: -webkit-gradient(linear, left bottom, right top, from($bright-yellow), to($bright-red));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .summer{
+      background-color: $light-yellow;
+      // color: $secondary-grey;
+      i{
+        &:before{
+          background: -webkit-gradient(linear, left bottom, right top, from($bright-yellow), to($bright-red));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
     }
   }
