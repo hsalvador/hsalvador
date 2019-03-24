@@ -37,8 +37,13 @@
       </nav>
 
     </header>
-    <section class="project-header">
-        <img src="./img/tw/header-project-view@0,38x.jpg" alt="Thunderwear app mockup" />
+    <section class="project-header container">
+      <picture class="hero-image">
+          <source media="(max-width: 768px)" srcset="./img/tw/header-project-view@0,38x.jpg">
+          <source media="(max-width: 992px)" srcset="./img/tw/header-project-view@0,5x.jpg">
+            <img src="./img/tw/header-project-view.jpg" alt="Thunderwear app mockup">
+      </picture>
+      <!-- <img src="./img/tw/header-project-view@0,38x.jpg" alt="Thunderwear app mockup" /> -->
     </section>
 
     <section class="project-summary project-content">
@@ -58,13 +63,19 @@
 
           <h4>Process</h4>
 
-          <ol class="method-list">
+          <picture class="process-img">
+              <source media="(max-width: 768px)" srcset="./img/tw/process-small.png">
+              <source media="(max-width: 992px)" srcset="./img/tw/process-medium.png">
+              <img src="./img/tw/process-medium.png" alt="Thunderwear app mockup">
+          </picture>
+
+          <!-- <ol class="method-list">
             <li><div class="box">Understand</div><i class="fas fa-arrow-down"></i></li>
             <li><div class="box">Define</div><i class="fas fa-arrow-down"></i></li>
             <li><div class="box">Ideate</div><i class="fas fa-arrow-down"></i></li>
             <li><div class="box">Prototype</div><i class="fas fa-arrow-down"></i></li>
             <li><div class="box">Validate</div></li>
-          </ol>
+          </ol> -->
 
           <!-- <ol class="method-list">
             <li><div class="box">Literature Review</div><i class="fas fa-arrow-down"></i></li>
