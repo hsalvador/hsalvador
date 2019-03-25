@@ -9,6 +9,9 @@ $menu-grey-hover: #666666;
 $grey-for-boxes: #F6F6F6;
 $very-light-grey: #FEFEFE;
 
+
+// TODO Put this in a nested var w/ function
+// THUNDERWEAR COLOURS
 $thunderwear-body-copy: #79858E;
 $base-accent-colour: #F15822;
 $very-light-blue: #F7FBFF;
@@ -19,9 +22,14 @@ $bright-blue: #10C4FD;
 $darker-blue: #4B7FFF;
 $bright-green: #17BBB0;
 $light-green: #e8fff3;
-
 $bright-yellow: #FFE684;
 $bright-red: #FF4142;
+
+// NATURES COLOURS
+$nb-body-copy: #798E7B;
+$nb-green: #79A945;
+$nb-secondary-green: #41af72;
+
 
 
 $light-red: #FFEAEB;
@@ -47,6 +55,10 @@ body{
 
   &.thunderwear{
     color: $thunderwear-body-copy;
+  }
+
+  &.natures{
+    color: $nb-body-copy;
   }
 
   // p:not(:last-child){
@@ -416,7 +428,7 @@ h5{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
-        grid-gap-column: $medium;
+        grid-column-gap: $medium;
         grid-row-gap: $large;
         text-align: center;
       }
@@ -431,8 +443,16 @@ h5{
       }
 
       .process{
-        background-color: $bright-green;
         padding-bottom: $medium-large;
+
+        &.tw{
+          background-color: $bright-green;
+        }
+
+        &.nb{
+          background-color: $nb-green;
+        }
+
 
         h4{
           color: white;
@@ -724,7 +744,16 @@ h5{
 
 .highlight{
   padding: $medium-large;
-  background: -webkit-gradient(linear, left bottom, right top, from($light-bright-blue), to($darker-blue));
+
+
+  &.tw{
+    background: -webkit-gradient(linear, left bottom, right top, from($light-bright-blue), to($darker-blue));
+  }
+
+  &.nb{
+    margin-top: $large;
+    background: -webkit-gradient(linear, left bottom, right top, from($nb-green), to($nb-secondary-green));
+  }
 
   @include respond-above(lg){
     padding: $xl;
@@ -964,7 +993,7 @@ h5{
   }
 }
 
-.ideation-gallery{
+.photo-gallery{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1000,8 +1029,41 @@ h5{
       width: calc(100% / 3 - 27px);
       margin: $small $medium-small;
     }
+  }
 
+  &.sketches{
+    a{
+      width: calc(100% / 2 - 20px);
+      margin: $tiny $small;
+      display: flex;
+      justify-content: center;
 
+      @include respond-above(md){
+        width: calc(100% / 3 - 14px);
+
+        &:first-child{
+          margin-left: 0;
+        }
+
+        &:nth-child(3){
+          margin-right: 0;
+        }
+      }
+
+      @include respond-above(lg){
+        width: calc(100% / 4 - 30px);
+        margin: $small $medium-small;
+        justify-content: center;
+      }
+
+      img{
+        align-self: center;
+      }
+    }
+  }
+
+  &.validate{
+    margin-top: $medium;
   }
 }
 
@@ -1103,6 +1165,7 @@ h5{
 .prototype-gif, .prototype-2-img{
   margin: $medium auto 0 auto;
   display: block;
+  text-align: center;
 }
 
 .prototype-gif{
@@ -1157,6 +1220,35 @@ h5{
     @include respond-above(sm){
     }
   }
+}
+
+//____________________________________
+// NATURE'S BYSTANDERS
+.matieres-sensibles, .chosen-concept{
+  margin-top: $medium;
+  figcaption{
+    text-align: right;
+  }
+
+  @include respond-above(md){
+    margin-top: 0;
+    margin-left: $medium;
+  }
+
+}
+
+.list-with-bullets{
+  margin-top: $small;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.paragraph-highlight{
+  margin: $medium-large auto;
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  font-style: italic;
+  max-width: 40%;
 }
 
 
