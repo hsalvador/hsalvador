@@ -230,6 +230,14 @@ h4{
   font-weight: 400;
   margin: $medium-large 0 $medium-small 0;
   text-transform: uppercase;
+
+  @include respond-above(sm){
+    margin-bottom: $medium;
+  }
+
+  @include respond-above(md){
+    margin-top: $large;
+  }
 }
 
 .thunderwear h4{
@@ -365,6 +373,11 @@ h5{
   h2{
     margin-top: $small;
     margin-bottom: $medium-small;
+
+    @include respond-above(md){
+      margin-top: $medium;
+      margin-bottom: $medium;
+    }
   }
 
   h4{
@@ -376,9 +389,13 @@ h5{
     margin-top: $medium-small;
     padding-bottom: $medium-large;
 
+    @include respond-above(md){
+      margin-top: $medium;
+      padding-bottom: $medium-large;
+    }
+
 
     .container{
-
       @include respond-above(sm){
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -443,6 +460,21 @@ h5{
 
 .tldr{
   text-align: center;
+  margin: $medium 0;
+
+  .container{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-row-gap: $medium;
+    width: 100%;
+
+    @include respond-above(sm){
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-column-gap: $large;
+    }
+  }
 
   .highlight-title{
     font-weight: 600;
@@ -451,8 +483,7 @@ h5{
     margin-bottom: $medium;
   }
 
-  margin: $medium 0;
-  // background-color: $grey-for-boxes;
+
 }
 
 .box{
@@ -462,13 +493,10 @@ h5{
   background-color: $grey-for-boxes;
   border-radius: 3px;
   padding: $small $medium;
-  margin: $small;
-  // min-width: 300px;
-  max-width: 330px;
+  max-width: 100%;
 
   &.persona{
     background-color: $very-light-blue;
-    min-width: 0;
   }
 }
 
@@ -483,12 +511,21 @@ h5{
     text-align: center;
   }
 
+  @include respond-above(md){
+    grid-gap: $large;
+  }
+
   q{
     display: inline-block;
     margin-top: $medium;
     padding-left: $small;
     font-style: italic;
     position: relative;
+
+    @include respond-above(md){
+      margin-top: $medium-large;
+      margin-bottom: $medium;
+    }
 
     &:before{
       content: "\“";
@@ -502,19 +539,39 @@ h5{
       line-height: 0.7;
       font-size: 7em;
       color: $light-blue;
+
+      @include respond-above(md){
+        font-size: 10em;
+      }
     }
   }
 }
 
 .personas-list{
+
+  @include respond-above(md){
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .persona{
     margin-top: $large;
     padding: 0 0 $medium 0;
 
-    @include respond-above(sm){
+    @include respond-between(sm, md){
       margin-left: auto;
       margin-right: auto;
       max-width: 70%;
+    }
+
+    @include respond-above(md){
+      width: calc(50% - 40px);
+
+      &:not(:last-child){
+        margin-right: $medium-large;
+      }
     }
 
     figure{
@@ -570,19 +627,35 @@ h5{
   }
 }
 
+.insights-list{
+  margin: $medium 0;
+}
+
 .task-list{
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(8, 1fr);
-
   grid-gap: $medium-small;
+
+  @include respond-above(sm){
+    max-width: 90%;
+    grid-column-gap: $large;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include respond-above(md){
+    max-width: 70%;
+    margin-top: $medium-large;
+  }
 
   li{
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: inherit;
+    padding: $small;
 
     &.decision-task{
       background-color: $light-red;
@@ -592,6 +665,7 @@ h5{
       background-color: $light-green;
     }
   }
+
   .thunderwear-task{
     grid-row-start: 6;
     grid-row-end: 8;
@@ -602,6 +676,7 @@ h5{
     border-bottom: 1px solid;
     width: 100%;
     text-transform: uppercase;
+    margin-top: 0;
     margin-bottom: 0;
     color: $lighter-grey;
   }
@@ -613,9 +688,36 @@ h5{
   }
 }
 
+.highlight{
+  padding-top: $medium-large;
+  padding-bottom: $medium-large;
+  background: -webkit-gradient(linear, left bottom, right top, from($light-bright-blue), to($darker-blue));
+
+  p{
+    color: white;
+    font-weight: 100;
+    text-align: center;
+
+    @include respond-above(sm){
+      font-size: 1.4em;
+    }
+  }
+}
+
 
 .legend{
   margin-top: $medium;
+
+  @include respond-above(sm){
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include respond-above(sm){
+    margin-top: $medium-large;
+    max-width: 70%;
+  }
 
   .legend-item{
 
@@ -654,15 +756,45 @@ h5{
     color: $thunderwear-body-copy;
   }
 
-  a{
-    margin-bottom: $small;
-    display: inline-block;
+  .survey-charts{
+    @include respond-above(md){
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-    img{
-      @include respond-above(sm){
-        max-width: 70%;
+    div{
+      width: calc(50% - 30px);
+      margin-top: $medium;
+
+      &:not(:last-child){
+        margin-right: 30px;
+      }
+      // margin-right: 30px;
+    }
+
+    h4{
+      @include respond-above(md){
+        text-align: center;
       }
     }
+
+    a{
+      margin-bottom: $small;
+      display: inline-block;
+
+      img{
+        @include respond-above(sm){
+          max-width: 70%;
+        }
+
+        @include respond-above(md){
+          max-width: 100%;
+        }
+      }
+    }
+
   }
 
   .survey-facts{
@@ -671,7 +803,7 @@ h5{
     text-align: center;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
-    align-items: center;
+    // align-items: center;
     grid-gap: $large;
 
     @include respond-above(sm){
@@ -679,6 +811,14 @@ h5{
       margin-bottom: $large;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
+    }
+
+    @include respond-above(md){
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: $medium;
+      // max-width: 80%;
+      // margin-left: auto;
+      // margin-right: auto;
     }
 
     hr{
@@ -708,11 +848,21 @@ h5{
   .season-facts{
     margin-top: $medium;
 
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
+    grid-gap: $medium-large;
+
     @include respond-above(sm){
-      display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-gap: $medium-large;
+      grid-template-rows: auto;
       margin-top: $large;
+    }
+
+    @include respond-above(md){
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .summer, .winter{
@@ -767,7 +917,11 @@ h5{
 
   a{
     padding: $small;
-    width: calc(50%);
+    width: calc(100% / 2);
+
+    @include respond-above(md){
+      width: calc(100% / 3);
+    }
   }
 }
 
@@ -783,6 +937,14 @@ h5{
     margin: $small;
     width: calc(100% / 2 - (10px * 2));
     text-align: center;
+
+    @include respond-above(sm){
+      width: calc(100% / 3 - (10px * 2));
+    }
+
+    @include respond-above(md){
+      width: calc(100% / 5 - (10px * 2));
+    }
 
     figure{
       padding-top: $small;
@@ -809,11 +971,30 @@ h5{
   list-style: none;
   counter-reset: my-awesome-counter;
 
+  @include respond-above(sm){
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      grid-column-gap: $medium-large;
+      grid-row-gap: $medium;
+  }
+
+  &.recommendations-list, &.lessons-learned-list{
+    @include respond-above(sm){
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+
   li{
     counter-increment: my-counter;
     position: relative;
     padding: 3px 0 $medium-large $medium-large ;
     line-height: 1.2;
+
+    @include respond-above(sm){
+      padding: 3px 0 $medium-small $medium-large;
+    }
 
     &:last-child{
       padding-bottom: 0;
@@ -832,8 +1013,11 @@ h5{
   }
 }
 
-.task-sample{
-  text-align: center;
+.two-column{
+  @include respond-above(md){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .prototype-gif, .prototype-2-img{
@@ -841,8 +1025,58 @@ h5{
   display: block;
 }
 
-.recommendations-list, .lessons-learned-list, .section-summary{
+.prototype-gif{
+  @include respond-above(md){
+    margin: 0 auto;
+  }
+}
+
+.prototype-2-img{
+  img{
+    @include respond-above(md){
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+}
+
+.recommendations-list, .lessons-learned-list{
   margin-top: $medium;
+
+  @include respond-above(md){
+    margin-top: $large;
+  }
+}
+
+.task-sample{
+  text-align: center;
+  margin-top: $medium;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);;
+  grid-row-gap: $medium-small;
+
+  @include respond-above(sm){
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: auto;
+    // grid-column-gap: $medium;
+  }
+
+  .box{
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-above(sm){
+    }
+  }
 }
 
 
