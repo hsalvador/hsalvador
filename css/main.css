@@ -521,7 +521,7 @@ h5 {
     background: -webkit-gradient(linear, left bottom, right top, from(#02D6FD), to(#4B7FFF)); }
   .highlight.nb {
     margin-top: 60px;
-    background: -webkit-gradient(linear, left bottom, right top, from(#79A945), to(#41af72)); }
+    background: #79A945; }
   @media (min-width: 1200px) {
     .highlight {
       padding: 80px; } }

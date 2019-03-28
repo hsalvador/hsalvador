@@ -752,7 +752,7 @@ h5{
 
   &.nb{
     margin-top: $large;
-    background: -webkit-gradient(linear, left bottom, right top, from($nb-green), to($nb-secondary-green));
+    background: $nb-green;
   }
 
   @include respond-above(lg){

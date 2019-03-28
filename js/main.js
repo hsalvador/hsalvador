@@ -35,3 +35,10 @@ $('[data-fancybox="prototype-2-gallery"]').fancybox({
       "close"
     ],
 });
+
+$('[data-fancybox="product-design-gallery"]').fancybox({
+  buttons: [
+      "zoom",
+      "close"
+    ],
+});
