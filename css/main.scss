@@ -30,6 +30,9 @@ $nb-body-copy: #798E7B;
 $nb-green: #79A945;
 $nb-secondary-green: #41af72;
 
+// ONLINE LEARNING COLOURS
+$ol-purple: #705bca;
+
 
 
 $light-red: #FFEAEB;
@@ -45,13 +48,13 @@ $xl: 80px;
 
 
 html{
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body{
   font-family: 'Akagi Pro', helvetica, sans-serif;
   color: #333;
-  font-weight: 100;
+  // font-weight: 100;
 
   &.thunderwear{
     color: $thunderwear-body-copy;
@@ -61,9 +64,11 @@ body{
     color: $nb-body-copy;
   }
 
-  // p:not(:last-child){
-  //   margin-bottom: $medium-small;
-  // }
+  // BODY-COPY
+
+  p:not(:last-child){
+    margin-bottom: $medium;
+  }
 }
 
 .container{
@@ -111,7 +116,7 @@ strong{
 }
 
 p, li, blockquote, q{
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 header{
@@ -223,27 +228,19 @@ h2, h3{
 
 h2{
   font-size: 2em;
+  line-height: 1;
 }
 
 h3{
   font-size: 1.75em;
-  margin-bottom: $medium-small;
+  margin-bottom: $medium;
   font-weight: 700;
   letter-spacing: 1.2px;
   color: $tertiary-grey;
-
-  // &:before{
-  //   content: "";
-  //   width: $medium-large;
-  //   border: 1px solid $secondary-grey;
-  //   display: block;
-  //   margin-bottom: $tiny;
-  //   color: inherit;
-  // }
 }
 
 h4{
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 400;
   margin: $medium-large 0 $medium-small 0;
   text-transform: uppercase;
@@ -264,6 +261,12 @@ h4{
 h5{
   font-weight: 400;
   font-size: 1.25em;
+  margin: $medium-large 0 $medium-small 0;
+}
+
+h6{
+  font-weight: 500;
+  margin: $medium 0 $small 0;
 }
 
 .card{
@@ -451,6 +454,10 @@ h5{
 
         &.nb{
           background-color: $nb-green;
+        }
+
+        &.ol{
+          background-color: $ol-purple;
         }
 
 
@@ -744,15 +751,19 @@ h5{
 
 .highlight{
   padding: $medium-large;
-
+  margin-top: $large;
 
   &.tw{
     background: -webkit-gradient(linear, left bottom, right top, from($light-bright-blue), to($darker-blue));
   }
 
   &.nb{
-    margin-top: $large;
+
     background: $nb-green;
+  }
+
+  &.ol{
+    background: $ol-purple;
   }
 
   @include respond-above(lg){
@@ -1112,6 +1123,8 @@ h5{
 .ordered-list{
   list-style: none;
   counter-reset: my-awesome-counter;
+  margin-top: $medium-large;
+  margin-bottom: $medium-large;
 
   @include respond-above(sm){
       display: grid;
@@ -1121,9 +1134,13 @@ h5{
       grid-row-gap: $medium;
   }
 
-  &.recommendations-list, &.lessons-learned-list{
+  &.recommendations-list, &.lessons-learned-list, &.one-col{
     @include respond-above(sm){
-      grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+      grid-template-columns: fit-content(100%);
+      grid-template-rows: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -1156,9 +1173,16 @@ h5{
 }
 
 .two-column{
+  // margin-top: $medium;
+  // margin-bottom: $medium;
   @include respond-above(md){
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: $large;
+  }
+
+  h5{
+    text-align: center;
   }
 }
 
@@ -1249,6 +1273,25 @@ h5{
   font-family: 'PT Serif', serif;
   font-style: italic;
   max-width: 40%;
+}
+
+
+
+// ONLINE-LEARNING
+.triangulation-chart{
+  margin-top: $medium;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+  @include respond-above(sm){
+    margin-top: $large;
+  }
+
+  @include respond-above(lg){
+    max-width: 70%;
+
+  }
 }
 
 
