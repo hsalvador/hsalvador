@@ -42,3 +42,10 @@ $('[data-fancybox="product-design-gallery"]').fancybox({
       "close"
     ],
 });
+
+$('[data-fancybox="online-learning-synthesis"]').fancybox({
+  buttons: [
+      "zoom",
+      "close"
+    ],
+});
