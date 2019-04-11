@@ -318,7 +318,7 @@ h6{
   }
 
   @include respond-above(md) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: $large;
     margin-bottom: $large;
   }
@@ -334,7 +334,7 @@ h6{
       text-decoration: none;
 
       &:hover > img{
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
       }
     }
 
@@ -577,7 +577,7 @@ h6{
 }
 
 .interview-quotes{
-  margin: $medium 0;
+  margin: $medium 0 0 0;
   display: inline-block;
 
   @include respond-above(sm){
