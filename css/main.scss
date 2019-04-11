@@ -20,7 +20,7 @@ $light-blue: #E6F9FF;
 $light-bright-blue: #02D6FD;
 $bright-blue: #10C4FD;
 $darker-blue: #4B7FFF;
-$bright-green: #17BBB0;
+$bright-green: #65D85B;
 $light-green: #e8fff3;
 $bright-yellow: #FFE684;
 $bright-red: #FF4142;
@@ -245,6 +245,18 @@ h2, h3{
 h2{
   font-size: 2em;
   line-height: 1;
+
+  &.tw-logo{
+    font-size: 3em;
+    text-align: center;
+    font-family: "Lobster" , sans-serif;
+    text-transform: capitalize;
+
+    &.light{
+      margin-bottom: $medium-large;
+      color: $grey-for-boxes;
+    }
+  }
 }
 
 h3{
@@ -465,7 +477,7 @@ h6{
         padding-bottom: $medium-large;
 
         &.tw{
-          background-color: $bright-green;
+          background-color: $bright-blue;
         }
 
         &.nb{
@@ -502,10 +514,40 @@ h6{
 
 .literature-summary{
   p.summary{
-    max-width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: $xl;
+
+    margin-top: $medium-large;
+
+    @include respond-above(sm){
+      max-width: 80%;
+      margin-top: $large;
+    }
+
+    @include respond-above(md){
+      max-width: 70%;
+      margin-top: $xl;
+    }
+
+    @include respond-above(lg){
+      max-width: 50%;
+    }
+  }
+}
+
+.app-final-design{
+  @include respond-above(md){
+    margin-top: $large;
+  }
+}
+
+
+section.highlight-section{
+  padding: $large 0 ;
+  background: -webkit-gradient(linear, left bottom, right top, from($light-bright-blue), to($darker-blue));
+
+  h3, p{
+    color: white;
   }
 }
 
@@ -614,7 +656,7 @@ h6{
       z-index: -1;
       line-height: 0.7;
       font-size: 7em;
-      color: $light-blue;
+      color: $light-green;
 
       @include respond-above(md){
         font-size: 10em;
@@ -785,6 +827,16 @@ h6{
     background: $ol-purple;
   }
 
+  padding: $medium;
+
+  @include respond-above(sm){
+    padding: $medium-large;
+  }
+
+  @include respond-above(md){
+    padding: $large;
+  }
+
   @include respond-above(lg){
     padding: $xl;
   }
@@ -795,7 +847,10 @@ h6{
     text-align: center;
 
     &.one-col-copy{
-      width: 50%;
+
+      @include respond-above(md){
+        width: 50%;
+      }
     }
 
     @include respond-above(sm){
@@ -1217,16 +1272,63 @@ h6{
 }
 
 .two-column{
-  // margin-top: $medium;
-  // margin-bottom: $medium;
+  @include respond-below(md){
+    display: grid;
+    grid-template-columns: 1fr;
+    // grid-column-gap: $large;
+    margin-top: $large;
+
+    &.reverse{
+      flex-flow: row;
+      flex-wrap: wrap-reverse;
+      display: flex;
+      justify-content: center;
+
+      @include respond-above(sm){
+        margin-top: $xxl;
+      }
+    }
+  }
+
   @include respond-above(md){
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: $large;
   }
 
-  h5{
-    // text-align: center;
+  .small-excerpt-column{
+    align-items: center;
+    align-self: center;
+
+    font-weight: 200;
+    text-align: center;
+
+    @include respond-above(sm){
+      font-size: 1.2em;
+    };
+
+    @include respond-above(md){
+      font-size: 1.5em;
+    };
+  }
+}
+
+picture.final-mockups{
+  @include respond-below(md){
+    img{
+      max-height: 600px;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+    }
+
+  }
+  @include respond-above(md){
+    img{
+      max-height: 700px;
+      margin: 0 auto;
+      display: block;
+    }
   }
 }
 
@@ -1253,10 +1355,16 @@ h6{
 }
 
 .three-column{
-  @include respond-above(md){
-    display: grid;
+  display: grid;
+
+  @include respond-below(sm){
+    max-width: 80%;
+    grid-row-gap: $medium;
+  }
+
+  @include respond-above(sm){
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: $medium-large;
+    grid-column-gap: $large;
   }
 }
 

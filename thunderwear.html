@@ -9,6 +9,7 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/zxr5ylh.css">
     <link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Reset CSS -->
@@ -37,17 +38,36 @@
       </nav>
     </header>
 
-    <section class="project-header container">
-      <picture class="hero-image">
-          <source media="(max-width: 767px)" srcset="./img/tw/header-project-view@0,38x.jpg">
-          <source media="(max-width: 991px)" srcset="./img/tw/header-project-view@0,5x.jpg">
-            <img src="./img/tw/header-project-view.jpg" alt="Thunderwear app mockup">
-      </picture>
+    <section class="project-content header highlight-section">
+      <div class="container">
+        <h2 class="tw-logo light">Thunderwear</h2>
+        <div class="two-column">
+          <div class="small-excerpt-column first">
+            <p>Thunderwear helps you optimize your morning routine and be prepared to face the elements by showing you what to wear according to the current weather.</p>
+          </div>
+
+          <picture class="final-mockup-snow final-mockups">
+            <source media="(max-width: 767px)" srcset="./img/tw/mockup-snow@0,25x.png">
+              <source media="(max-width: 991px)" srcset="./img/tw/mockup-snow@0,3x.png">
+                <img src="./img/tw/mockup-snow@0,5x.png" alt="Thunderwear app mockup">
+              </picture>
+          </div>
+          <div class="two-column reverse">
+              <picture class="final-mockup-sunny final-mockups">
+                <source media="(max-width: 767px)" srcset="./img/tw/mockup-sunny@0,25x.png">
+                  <source media="(max-width: 991px)" srcset="./img/tw/mockup-sunny@0,3x.png">
+                    <img src="./img/tw/mockup-sunny@0,5x.png" alt="Thunderwear app mockup">
+                  </picture>
+              <div class="small-excerpt-column second">
+                <p>Location-based single screen app, Thunderwear gives you <strong><i>all</i></strong> and <strong><i>only</i></strong> the information you need to pick the right clothes and accessories to slay the day.</p>
+              </div>
+          </div>
+        </div>
     </section>
 
     <section class="project-summary project-content">
           <div class="top-summary container">
-            <h2>Thunderwear</h2>
+            <h2 class="tw-logo dark">Thunderwear</h2>
             <p class="overview">Thunderwear is a weather app that focuses on optimizing a user’s morning routine and minimizing the amount of decisions they have to make by showing them what clothing & accessories they should wear or carry when leaving home.<br />This is a project that started as a simple Javascript assignment, but I believed to be interesting enough to be backed up with a full User Research process.</p>
           </div>
 
@@ -573,13 +593,24 @@
       </ol>
     </section>
 
-    <section class="container project-content">
-      <h3>App Design - Phase 2</h3>
-      <div class="two-column">
-        <p>As a last step before the next development iteration (coming soon!), an improved User Interface was designed — this time with clear and better visual identity, incorporating a few of the recommendations from the usability testing sessions.</p>
-
-        <a href="./img/tw/prototype-2.jpg" data-fancybox="prototype-2" data-caption="Prototype - Iteration 2" class="prototype-2-img">
-          <img src="./img/tw/prototype-2@0,38x.jpg" alt="Mobile phone mockups" />
+    <section class="project-content highlight-section">
+      <div class="container">
+        <h3>App Design - Phase 2</h3>
+        <div class="copy-column">
+          <p>As a last step before the next development iteration (coming soon!), an improved User Interface was designed — this time with clear and better visual identity, incorporating a few of the recommendations from the usability testing sessions.</p>
+        </div>
+        <div class="two-column app-final-design">
+          <picture class="final-mockup-sunny final-mockups">
+            <source media="(max-width: 767px)" srcset="./img/tw/mockup-sunny@0,25x.png">
+              <source media="(max-width: 991px)" srcset="./img/tw/mockup-sunny@0,3x.png">
+                <img src="./img/tw/mockup-sunny@0,5x.png" alt="Thunderwear app mockup">
+              </picture>
+          <picture class="final-mockup-snow final-mockups">
+            <source media="(max-width: 767px)" srcset="./img/tw/mockup-snow@0,25x.png">
+              <source media="(max-width: 991px)" srcset="./img/tw/mockup-snow@0,3x.png">
+                <img src="./img/tw/mockup-snow@0,5x.png" alt="Thunderwear app mockup">
+              </picture>
+        </div>
         </a>
       </div>
     </section>
@@ -588,9 +619,7 @@
       <h3>Limitations & Takeaways</h3>
       <div class="copy-column">
         <ul class="lessons-learned-list list-with-bullets">
-          <!-- <li><strong>Acessibility - </strong>The research and the concept lacked looking at accessibility.</li> -->
           <li><b>Team Work: </b>Some stages of the process could have resulted in totally different ideas if I had a team to collaborate with — especially at the stage of ideation and concept design.</li>
-          <!-- <li><strong>Target Audience - </strong>I wish I had had the time and resources to reach a broader audience with the questionnaire and survey. The usability tests were also very limited.</li> -->
           <li><b>Literature Review: </b>There isn't a huge amount of data about how small decisions affect the bigger picture of decision-fatigue (most of the studies I found are from 2017-2018).</li>
           <li><b>Target Audience: </b>Journey Maps would have helped communicate how Thunderwear impacts the mood and morning experience of the personas.</li>
           <li><b>Validation: </b>A bigger usability testing for a concept such as this one is ultimately necessary — here I was limited by time and resources. Benchmarking Thunderwear against traditional weather apps mentioned on the survey to measure the performance of the user when choosing their outfit would be an interesting metric.<br />It would also be valuable to look at the broader picture — in a scenario where someone uses Thunderwear on a daily basis, how does the improvement of that morning decision affect the overall mood or cognitive performance throughout the day?<br />Are avid users forgetting less accessories and leaving home better prepared for the current weather?</li>
