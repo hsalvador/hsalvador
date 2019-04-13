@@ -20,6 +20,9 @@ body {
   body p:not(:last-child) {
     margin-bottom: 30px; }
 
+main {
+  min-height: calc(100vh - 300px); }
+
 .container {
   padding-left: 22px;
   padding-right: 22px;
@@ -1131,6 +1134,8 @@ hr.style-one {
       -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr); } }
   .photography-gallery a img {
+    width: 100%;
+    height: auto;
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
