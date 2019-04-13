@@ -330,9 +330,20 @@ h6{
   }
 
   @include respond-above(md) {
-    grid-template-columns: 1fr 1fr;
     grid-gap: $large;
     margin-bottom: $large;
+  }
+
+  h2{
+    @include respond-below(md){
+      font-size: 1.3em;
+    }
+  }
+
+  &.photography{
+    @include respond-above(sm){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
   .project-element{
@@ -412,7 +423,12 @@ h6{
     width: 80%;
     // width: 60%;
   }
+}
 
+.img-with-border{
+  border: 1px solid $menu-grey-normal;
+  border-radius: 8px;
+  padding: $medium;
 }
 
 .project-summary{
@@ -1275,7 +1291,7 @@ section.highlight-section{
   @include respond-below(md){
     display: grid;
     grid-template-columns: 1fr;
-    // grid-column-gap: $large;
+    grid-row-gap: $large;
     margin-top: $large;
 
     &.reverse{
@@ -1456,12 +1472,22 @@ picture.final-mockups{
 }
 
 .paragraph-highlight{
-  margin: $xxl auto;
   text-align: center;
   font-family: 'PT Serif', serif;
   font-style: italic;
-  max-width: 60%;
-  font-size: 2em;
+  margin: $large auto;
+  max-width: 80%;
+  font-size: 1.2em;
+
+  @include respond-above(sm){
+    font-size: 1.5em;
+  }
+
+  @include respond-above(md){
+    margin: $xxl auto;
+    max-width: 60%;
+    font-size: 2em;
+  }
 }
 
 
