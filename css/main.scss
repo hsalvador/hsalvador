@@ -1516,7 +1516,43 @@ hr.style-one {
     margin-top: $xl;
     margin-bottom: $xl;
 }
-// ------------------------------------------- FOOTER
+
+
+// -------------------------- PHOTOGRAPHY
+
+
+.photography-gallery{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: $medium-small;
+
+  @include respond-above(sm){
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $medium-large;
+    grid-row-gap: $medium-large;
+  }
+
+  @include respond-above(md){
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  a{
+
+    img{
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+
+    &:hover > img{
+      box-shadow: 0 5px 5px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
+    }
+  }
+}
+
+
+
+
+
+// ------------------------------ FOOTER
 
 footer{
   background-color: #f7f7f7;

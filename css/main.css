@@ -1114,6 +1114,30 @@ hr.style-one {
   margin-top: 80px;
   margin-bottom: 80px; }
 
+.photography-gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px; }
+  @media (min-width: 768px) {
+    .photography-gallery {
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 40px;
+      grid-row-gap: 40px; } }
+  @media (min-width: 992px) {
+    .photography-gallery {
+      -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr); } }
+  .photography-gallery a img {
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .photography-gallery a:hover > img {
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1); }
+
 footer {
   background-color: #f7f7f7;
   padding: 30px; }
