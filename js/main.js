@@ -7,7 +7,6 @@ $('[data-fancybox="ideation-gallery"]').fancybox({
     ],
 });
 
-
 $('[data-fancybox="breakpoints-gallery"]').fancybox({
   buttons: [
       "zoom",
