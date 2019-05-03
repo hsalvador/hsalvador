@@ -24,6 +24,14 @@ $light-green: #e8fff3;
 $bright-yellow: #FFE684;
 $bright-red: #FF4142;
 
+// BARKING LOVE'S ORANGE
+$bl-orange: #F15822;
+$bl-orange-faded: #ff845b;
+$bl-body-copy: #8e8f93;
+$bl-light-grey: #F9F9F9;
+$bl-green: #769C39;
+
+
 // NATURES COLOURS
 $nb-body-copy: #798E7B;
 $nb-green: #79A945;
@@ -60,6 +68,14 @@ body{
 
     h3{
       color: $bright-blue;
+    }
+  }
+
+  &.barking-love{
+    color: $bl-body-copy;
+
+    h3{
+      color: $bl-orange;
     }
   }
 
@@ -259,6 +275,11 @@ h2{
       margin-bottom: $medium-large;
       color: $grey-for-boxes;
     }
+  }
+
+  &.bl-logo{
+    max-width: 250px;
+    margin: 0 auto;
   }
 }
 
@@ -840,6 +861,24 @@ section.highlight-section{
   &.nb{
     background: $nb-green;
     margin-top: $xl;
+  }
+
+  &.bl{
+    background: $bl-orange-faded;
+    margin-top: $xl;
+
+    p{
+      color: white;
+    }
+
+    h3{
+      color: white;
+      text-align: center;
+    }
+
+    @include respond-above(sm){
+      padding: $xxl 0;
+    }
   }
 
   &.ol{
@@ -1519,6 +1558,65 @@ hr.style-one {
     margin-top: $xl;
     margin-bottom: $xl;
 }
+
+
+// -------------------------- BARKING LOVE
+.bl-pattern{
+  @include respond-above(md){
+    background-image: url("../img/barking-love/barking-love-pattern.png");
+    background-position: top right;
+    background-repeat: repeat-y;
+  }
+}
+
+.acme{
+  font-family: 'Acme', sans-serif;
+}
+
+.signika{
+  font-family: 'Signika', sans-serif;
+  font-weight: 300;
+}
+
+.font-sample{
+  font-size: 4em;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.colour-palette{
+  font-size: 0.725em;
+
+  .bl-grey{
+    color: $bl-body-copy;
+  }
+
+  .bl-orange{
+    color: $bl-orange;
+  }
+
+  .bl-green{
+    color: $bl-green;
+  }
+}
+
+.colour-sample{
+  width: 100%;
+  height: 30px;
+
+  &.grey{
+    background-color: $bl-light-grey;
+  }
+
+  &.orange{
+    background-color: $bl-orange;
+  }
+
+  &.green{
+    background-color: $bl-green;
+  }
+}
+
 
 
 // -------------------------- PHOTOGRAPHY
