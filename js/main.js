@@ -48,3 +48,17 @@ $('[data-fancybox="online-learning-synthesis"]').fancybox({
       "close"
     ],
 });
+
+$('[data-fancybox="existing-design"]').fancybox({
+  buttons: [
+      "zoom",
+      "close"
+    ],
+});
+
+$('[data-fancybox="new-design"]').fancybox({
+  buttons: [
+      "zoom",
+      "close"
+    ],
+});
