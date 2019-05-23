@@ -41,6 +41,13 @@ $nb-secondary-green: #41af72;
 $ol-purple: #705BCA;
 
 
+// Smart Cistern
+$sc-light-blue: #F1F8FF;
+$sc-grey: #636E79;
+$sc-before-grey: #F9F7F8;
+$sc-bright-blue: #4DA6F1;
+
+
 $light-red: #FFEAEB;
 
 $tiny: 5px;
@@ -51,6 +58,7 @@ $medium-large: 40px;
 $large: 60px;
 $xl: 80px;
 $xxl: 100px;
+$xxxl: 150px;
 
 
 
@@ -69,6 +77,15 @@ body{
     h3{
       color: $bright-blue;
     }
+  }
+
+  &.smart-cistern{
+    color: $sc-grey;
+
+    h3{
+      color: $sc-bright-blue;
+    }
+
   }
 
   &.barking-love{
@@ -110,6 +127,10 @@ main{
   padding-left: 22px;
   padding-right: 22px;
   margin: 0 auto;
+
+  &.with-margin-top{
+    margin-top: $xxxl;
+  }
 
   @include respond-below(xs) {
     &{
@@ -274,6 +295,16 @@ h2{
     &.light{
       margin-bottom: $medium-large;
       color: $grey-for-boxes;
+    }
+  }
+
+  &.smart-cistern{
+    margin-bottom: $medium;
+    color: $sc-bright-blue;
+
+    @include respond-above(sm){
+      text-align: left;
+      margin-bottom: $large;
     }
   }
 
@@ -584,10 +615,20 @@ h6{
 
 section.highlight-section{
   padding: $large 0 ;
-  background: -webkit-gradient(linear, left bottom, right top, from($light-bright-blue), to($darker-blue));
 
-  h3, p{
-    color: white;
+  &.tw{
+    background: -webkit-gradient(linear, left bottom, right top, from($light-bright-blue), to($darker-blue));
+    h3, p{
+      color: white;
+    }
+  }
+
+  &.sc-before{
+    background-color: $sc-before-grey;
+  }
+
+  &.sc{
+    background-color: $sc-light-blue;
   }
 }
 
@@ -1166,8 +1207,26 @@ section.highlight-section{
 
   margin-top: $medium-small;
 
+  &.center-aligned{
+    align-items: center;
+    justify-items: center;
+  }
+
   @include respond-above(md){
     margin-top: $medium-small;
+
+    &.high-fi-first-line{
+      margin-bottom: $xxl;
+      a:nth-child(2){
+        margin-top: 150px;
+      }
+    }
+
+    &.high-fi-second-line{
+      a:nth-child(1), a:nth-child(3){
+        margin-top: 150px;
+      }
+    }
   }
 
   @include respond-above(lg){
@@ -1230,6 +1289,16 @@ section.highlight-section{
   &.validate{
     margin-top: $medium;
   }
+
+  img{
+    &.hifi-wireframes{
+      border-radius: 20px;
+      margin-right: $medium;
+      -webkit-box-shadow: 0px 0px 32px -5px rgba(1,25,49,0.11);
+      -moz-box-shadow: 0px 0px 32px -5px rgba(1,25,49,0.11);
+      box-shadow: 0px 0px 32px -5px rgba(1,25,49,0.11);
+    }
+  }
 }
 
 
@@ -1239,6 +1308,13 @@ section.highlight-section{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
+  &.sc{
+    figure{
+      padding-top: 0;
+      padding: 0;
+    }
+  }
 
   li{
     margin: $small;
@@ -1252,6 +1328,8 @@ section.highlight-section{
     @include respond-above(md){
       width: calc(100% / 5 - (10px * 2));
     }
+
+
 
     figure{
       padding-top: $small;
@@ -1360,6 +1438,15 @@ section.highlight-section{
 
     font-weight: 200;
     text-align: center;
+
+    &.sc{
+      text-align: left;
+      color: $sc-grey;
+
+      @include respond-below(sm){
+        text-align: center;
+      }
+    }
 
     @include respond-above(sm){
       font-size: 1.2em;
