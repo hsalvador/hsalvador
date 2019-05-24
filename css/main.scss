@@ -112,6 +112,23 @@ body{
     }
   }
 
+  a{
+    &.text-link{
+      text-decoration: none;
+      &:link{
+        color: #418dcc;
+      }
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      &:visited{
+        color: #418dcc;
+      }
+    }
+  }
+
   // BODY-COPY
 
   p:not(:last-child){
