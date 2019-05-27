@@ -277,6 +277,8 @@ header{
   }
 
   nav{
+    margin-bottom: $medium;
+
     @include respond-above(md){
       align-self: center;
     }
@@ -392,18 +394,18 @@ h6{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: $medium-large;
-  margin-bottom: $medium;
+  grid-gap: $large;
+  margin-bottom: $large;
 
   @include respond-above(sm) {
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
     grid-gap: $large;
-    margin-bottom: $medium-large;
+    margin-bottom: $large;
   }
 
   @include respond-above(md) {
     grid-gap: $large;
-    margin-bottom: $large;
+    margin-bottom: $xxxl;
   }
 
   h2{
@@ -419,18 +421,12 @@ h6{
   }
 
   .project-element{
-    text-align: center;
-
     @include respond-above(md) {
       margin-bottom: 0;
     }
 
     a{
       text-decoration: none;
-
-      &:hover > img{
-        box-shadow: 0 5px 5px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
-      }
     }
 
     img{
@@ -440,7 +436,7 @@ h6{
       position: relative;
 
       @include respond-below(xs) {
-        max-width: 250px;
+        // max-width: 250px;
         height: auto;
       }
 
@@ -456,8 +452,83 @@ h6{
 
     }
 
-    p{
+    p:not(:last-child){
       color: $lighter-grey;
+    }
+  }
+
+  .project-link{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: $medium-small;
+
+    h2{
+      font-weight: bold;
+    }
+
+    @include respond-above(sm){
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: $medium-small;
+      align-content: flex-end;
+
+
+      @include respond-above(md){
+        grid-column-gap: $medium-large;
+        grid-row-gap: $xxl;
+      }
+
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+
+      @include respond-above(sm){
+        margin-bottom: 0;
+      }
+    }
+
+    .project-description{
+      align-self: end;
+      text-align: left;
+
+      .project-type{
+        margin-top: $tiny;
+        font-size: 0.9em;
+        color: #AAAAAA;
+      }
+    }
+
+    .project-description-excerpt{
+      font-size: 0.875em;
+
+      @include respond-above(md){
+        font-size: inherit;
+      }
+    }
+
+    .read-more{
+      // font-family: Lato;
+      line-height: 1;
+      text-transform: uppercase;
+      // font-weight: 500;
+      color: $lighter-grey;
+      color: $base-accent-colour;
+
+      &:hover{
+        // font-weight: 500;
+        .read-more-icon{
+          margin-left: $medium-small;
+        }
+      }
+
+      .read-more-icon{
+        color: $base-accent-colour;
+        margin-left: $tiny;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      }
     }
   }
 }
