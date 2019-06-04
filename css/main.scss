@@ -1,6 +1,9 @@
 @import "breakpoints.scss";
 
 $primary-grey: #333333;
+$header-colour: #000000;
+$subheader-colour: #666666;
+$body-colour: #111111;
 $secondary-grey: #4E4E4E;
 $tertiary-grey: #666666;
 $lighter-grey: #919191;
@@ -13,6 +16,7 @@ $very-light-grey: #FEFEFE;
 // THUNDERWEAR COLOURS
 $thunderwear-body-copy: #79858E;
 $base-accent-colour: #F15822;
+$brand-accent-colour: #0B48BC;
 $very-light-blue: #F7FBFF;
 $light-yellow: #FFF7E6;
 $light-blue: #E6F9FF;
@@ -59,6 +63,7 @@ $large: 60px;
 $xl: 80px;
 $xxl: 100px;
 $xxxl: 150px;
+$xxxxl: 200px;
 
 
 
@@ -67,8 +72,9 @@ html{
 }
 
 body{
-  font-family: akagi-pro, helvetica, sans-serif;
-  color: #333;
+  // font-family: akagi-pro, helvetica, sans-serif;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  color: $body-colour;
   // font-weight: 100;
 
   &.thunderwear{
@@ -130,7 +136,6 @@ body{
   }
 
   // BODY-COPY
-
   p:not(:last-child){
     margin-bottom: $medium;
   }
@@ -202,16 +207,25 @@ header{
   @include respond-above(md){
     padding: $large;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     align-content: center;
+    align-items: center;
+    // justify-items: center;
   }
 
   .logo{
-    font-family: 'aller',sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    text-transform: uppercase;
-    color: $base-accent-colour;
+    display: block;
+    text-indent: -9999px;
+    width: 100px;
+    height: 42px;
+    background: url('../img/hs-logo.png');
+    background-size: 100px 42px;
+
+    margin: 0 auto $medium-large auto;
+
+    @include respond-above(md){
+      margin: 0;
+    }
   }
 
   // MENU
@@ -226,16 +240,15 @@ header{
 
     li{
       text-transform: uppercase;
-      font-size: 0.875em;
-      font-weight: 400;
+      font-size: 0.725em;
       padding: 0 $medium-small;
 
       @include respond-above(sm){
-        font-size: 0.875em;
+        font-size: 0.825em;
       }
 
       @include respond-above(md){
-        font-size: 1em;
+        font-size: 0.825em;
       }
 
       &:first-child{
@@ -247,11 +260,21 @@ header{
       }
 
       a{
+        font-weight: bold;
         text-decoration: none;
         color: inherit;
         color: $menu-grey-normal;
+        transition: all 0.3s;
 
-        &.active, &:hover{
+        &.active{
+          color: black;
+
+          &:hover{
+            color: black;
+          }
+        }
+
+        &:hover{
           color: $menu-grey-hover;
         }
       }
@@ -259,10 +282,10 @@ header{
   }
 
   h1{
-    margin-bottom: $medium-small;
+    // margin-bottom: $medium-small;
 
     @include respond-above(sm){
-      margin-bottom: $medium-large
+      // margin-bottom: $medium-large
     }
 
     @include respond-above(md){
@@ -280,13 +303,14 @@ header{
     margin-bottom: $medium;
 
     @include respond-above(md){
+      margin-bottom: 0;
       align-self: center;
     }
   }
 }
 
 h1, h2, h3, h4, h5, h6{
-  color: $secondary-grey;
+  color: $header-colour;
 }
 
 h1{
@@ -296,13 +320,14 @@ h1{
 
 h2, h3{
   font-weight: 200;
-  color: $secondary-grey;
+  color: $header-colour;
   text-transform: uppercase;
   // letter-spacing: 0.8px;
 }
 
 h2{
   font-size: 2em;
+  font-family: korolev, Helvetica, sans-serif;
   line-height: 1;
 
   &.tw-logo{
@@ -338,13 +363,13 @@ h3{
   margin-bottom: $medium;
   font-weight: 400;
   letter-spacing: 2px;
-  color: $tertiary-grey;
+  // color: $tertiary-grey;
 }
 
 h4{
   font-size: 1.5em;
   font-weight: 400;
-  color: $lighter-grey;
+  // color: $lighter-grey;
   margin: $medium-large 0 $medium-small 0;
 
   @include respond-above(sm){
@@ -371,6 +396,136 @@ h6{
   margin: $xl 0 $medium-small 0;
 }
 
+.hero{
+  margin: $medium-small auto;
+  font-family: korolev, Helvetica, sans-serif;
+  font-weight: bold;
+
+  @include respond-above(sm){
+    margin: $large auto;
+  }
+
+  .hero-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 6em;
+
+    @include respond-above(sm){
+      font-size: 10em;
+    }
+
+    @include respond-above(md){
+      font-size: 12em;
+    }
+
+    @include respond-above(lg){
+      font-size: 14em;
+    }
+
+    &.contact{
+      font-size: 12em;
+
+      p{
+        letter-spacing: 20px;
+
+        @include respond-above(lg){
+          letter-spacing: 20px;
+        }
+      }
+    }
+
+    p{
+      line-height: 1;
+      text-shadow: 0 0 40px rgba(11,72,188,0.30);
+      color: white;
+      letter-spacing: 15px;
+
+      @include respond-above(sm){
+        letter-spacing: 28px;
+        text-shadow: 0 0 86px rgba(11,72,188,0.30);
+      }
+
+      @include respond-above(md){
+        letter-spacing: 38px;
+        text-shadow: 0 0 86px rgba(11,72,188,0.30);
+      }
+
+      @include respond-above(lg){
+        letter-spacing: 48px;
+        text-shadow: 0 0 86px rgba(11,72,188,0.30);
+      }
+    }
+  }
+
+  .hero-body{
+    color: $secondary-grey;
+    // text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 380px;
+    margin: -36px auto 0 auto;
+    letter-spacing: 0.5px;
+
+    @include respond-above(sm){
+      font-size: 1.825em;
+      max-width: 720px;
+      margin: -64px auto 0 auto;
+    }
+
+    @include respond-above(md){
+      font-size: 2.225em;
+      max-width: 976px;
+      margin: -70px auto 0 auto;
+    }
+
+    @include respond-above(lg){
+      max-width: 1220px;
+      font-size: 2.425em;
+      margin: -78px auto 0 auto;
+    }
+
+    &.contact{
+      margin: -72px auto 0 auto;
+    }
+
+    p{
+      line-height: 1.4;
+      font-weight: normal;
+    }
+  }
+
+  .cta{
+    text-transform: uppercase;
+    margin: $xxl auto;
+    text-align: center;
+
+    @include respond-above(sm){
+      margin: $xxxl auto;
+    }
+
+    i{
+      font-size: 1.25em;
+      animation: slide-down 1s ease-in-out infinite;
+    }
+
+    @keyframes slide-down {
+      0%{
+        transform: translate(0, 0);
+      }
+      100%{
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(0, 10px);
+      }
+
+    }
+  }
+
+
+}
+
+
 .card{
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -394,7 +549,7 @@ h6{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: $large;
+  grid-gap: $xxl;
   margin-bottom: $large;
 
   @include respond-above(sm) {
@@ -404,7 +559,7 @@ h6{
   }
 
   @include respond-above(md) {
-    grid-gap: $large;
+    grid-gap: $xxxl;
     margin-bottom: $xxxl;
   }
 
@@ -420,12 +575,10 @@ h6{
     }
 
     .project-element{
-
       .project-link{
         display: grid;
         grid-row-gap: $medium;
-
-          grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
 
         img{
 
@@ -480,7 +633,7 @@ h6{
     }
 
     p:not(:last-child){
-      color: $lighter-grey;
+      color: #666666;
     }
   }
 
@@ -537,12 +690,12 @@ h6{
     }
 
     .read-more{
-      // font-family: Lato;
+      font-family: korolev, Helvetica, sans-serif;
       line-height: 1;
       text-transform: uppercase;
       // font-weight: 500;
-      color: $lighter-grey;
-      color: $base-accent-colour;
+      // color: $lighter-grey;
+      color: $header-colour;
 
       &:hover{
         // font-weight: 500;
@@ -552,7 +705,7 @@ h6{
       }
 
       .read-more-icon{
-        color: $base-accent-colour;
+        color: $header-colour;
         margin-left: $tiny;
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
       }
