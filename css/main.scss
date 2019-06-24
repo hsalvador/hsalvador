@@ -11,6 +11,9 @@ $menu-grey-normal: #c6c6c6;
 $menu-grey-hover: #666666;
 $grey-for-boxes: #F6F6F6;
 $very-light-grey: #FEFEFE;
+$main-accent: #4E80DE;
+$valid: #54cea3;
+$invalid: #dd4f4f;
 
 // TODO Put this in a nested var w/ function
 // THUNDERWEAR COLOURS
@@ -401,8 +404,16 @@ h6{
   font-family: korolev, Helvetica, sans-serif;
   font-weight: bold;
 
+  &.contact{
+    margin: $small auto;
+  }
+
   @include respond-above(sm){
     margin: $large auto;
+
+    &.contact{
+      margin: $medium-small auto;
+    }
   }
 
   .hero-title{
@@ -423,13 +434,30 @@ h6{
     }
 
     &.contact{
-      font-size: 12em;
+      font-size: 4em;
 
       p{
-        letter-spacing: 20px;
+        letter-spacing: 10px;
+      }
 
-        @include respond-above(lg){
-          letter-spacing: 20px;
+      @include respond-above(sm){
+        font-size: 5.725em;
+        p{
+          letter-spacing: 12px;
+        }
+      }
+
+      @include respond-above(md){
+        font-size: 8em;
+        p{
+          letter-spacing: 12px;
+        }
+      }
+
+      @include respond-above(lg){
+        font-size: 10em;
+        p{
+          letter-spacing: 15px;
         }
       }
     }
@@ -466,27 +494,41 @@ h6{
     margin: -36px auto 0 auto;
     letter-spacing: 0.5px;
 
+    &.contact{
+      margin: -22px auto 0 auto;
+    }
+
     @include respond-above(sm){
       font-size: 1.825em;
       max-width: 720px;
       margin: -64px auto 0 auto;
+
+      &.contact{
+        margin: -30px auto 0 auto;
+      }
     }
 
     @include respond-above(md){
       font-size: 2.225em;
       max-width: 976px;
       margin: -70px auto 0 auto;
+
+      &.contact{
+        margin: -40px auto 0 auto;
+      }
     }
 
     @include respond-above(lg){
       max-width: 1220px;
       font-size: 2.425em;
       margin: -78px auto 0 auto;
+
+      &.contact{
+        margin: -60px auto 0 auto;
+      }
     }
 
-    &.contact{
-      margin: -72px auto 0 auto;
-    }
+
 
     p{
       line-height: 1.4;
@@ -2009,6 +2051,139 @@ hr.style-one {
   }
 }
 
+
+.contact-form{
+  margin: $xl auto;
+  width: 100%;
+  height: auto;
+
+
+  @include respond-above(sm){
+    width: 500px;
+    margin: $xxl auto;
+  }
+
+  @include respond-above(md){
+    margin: $xxxl auto;
+  }
+
+  ::placeholder{
+    opacity: 0;
+  }
+
+  .input-container{
+    width: 100%;
+    min-height: 80px;
+    position: relative;
+    margin-bottom: $small;
+
+    @include respond-above(sm){
+      margin-bottom: $medium;
+    }
+
+
+    &.with-text-area{
+      min-height: 130px;
+      margin-bottom: $medium-small;
+
+      @include respond-above(sm){
+        min-height: 180px;
+      }
+    }
+
+    textarea{
+      resize: none;
+      min-height: 130px;
+
+      @include respond-above(sm){
+        min-height: 180px;
+      }
+
+      &::-webkit-scrollbar {
+          width: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $menu-grey-normal;
+      }
+    }
+
+    input, textarea{
+      width: 100%;
+      position: absolute;
+      top: 0; left: 0;
+      border: none;
+      border-bottom: 2px solid $lighter-grey;
+      padding: $small;
+      font-family: inherit;
+
+      &:focus, &:not(:placeholder-shown){
+        border-bottom: 2px solid $header-colour;
+        outline: 0;
+
+        ~ label{
+          font-weight: bold;
+          color: $tertiary-grey;
+          transform: translateY(-30px) scale(0.7, 0.7);
+        }
+      }
+
+      &:not(:placeholder-shown){
+        &:valid{
+          border-bottom: 2px solid $valid;
+        }
+
+        &:invalid{
+          border-bottom: 2px solid $invalid;
+        }
+
+        + label{
+          color: $tertiary-grey;
+          cursor: pointer;
+        }
+      }
+    }
+
+
+    label{
+      padding: $small;
+      width: 500px;
+      position: absolute;
+      color: $lighter-grey;
+      top: 0;
+      left: 0;
+      padding-left: $small;
+      text-transform: uppercase;
+      font-family: korolev, Helvetica, sans-serif;
+      transition: all 0.2s;
+      transform-origin: top left;
+      touch-action: manipulation;
+      cursor: text;
+    }
+  }
+
+  button.contact-send{
+    width: 100%;
+    height: 50px;
+    margin-top: $medium-small;
+    background-color: white;
+    position: absolute;
+    top: 0; left: 0;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 40px rgba(11,72,188,0.30);
+    font-family: korolev, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: $tertiary-grey;
+    transition: all 0.2s;
+
+    &:hover{
+      box-shadow: 0 0 40px rgba(11,72,188,0.50);
+      color: $main-accent;
+    }
+  }
+}
 
 
 

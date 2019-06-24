@@ -5,9 +5,9 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115757599-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag(){dataLayer.push(arguments);}
+    // gtag('js', new Date());
 
     // gtag('config', 'UA-115757599-1');
   </script>
@@ -38,13 +38,13 @@
 				<li>
 					<a class="item-2" href="photography.html">Photography</a>
 				</li>
-				<!-- <li> -->
-					<!-- <a class="active item-3" href="contact.html">Contact</a> -->
-				<!-- </li> -->
+				<li>
+					<a class="active item-3" href="contact.html">Contact</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
-  <div class="hero">
+  <div class="hero contact">
     <div class="hero-title contact"><p>Send a Raven</p></div>
     <div class="hero-body contact">
       <p>
@@ -52,8 +52,26 @@
       </p>
     </div>
   </div>
-  <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-	<footer>
+  <section class="container">
+    <form class="contact-form" action="https://formspree.io/henrique.r.salvador@gmail.com" method="post">
+      <div class="input-container">
+        <input type="text" name="name" id="name" value="" placeholder="Jane Doe" autofocus required/>
+        <label for="name" class="floating-label">Your Name</label>
+      </div>
+      <div class="input-container">
+        <input type="email" name="email" id="email" value="" placeholder="example@email.com" required/>
+        <label for="email" class="floating-label">Your E-mail</label>
+      </div>
+      <div class="input-container with-text-area">
+        <textarea name="message" id="message" placeholder="Hello!" required></textarea>
+        <label for="message" class="floating-label">Your Message</label>
+      </div>
+      <div class="input-container">
+        <button type="submit" name="button" class="contact-send">Send</button>
+      </div>
+    </form>
+  </section>
+  <footer>
 		<ul class="social-media">
 			<li class="linkedin">
 				<a href="https://www.linkedin.com/in/henriquesalvador42" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -62,7 +80,7 @@
 				<a href="https://instagram.com/hsalvador42" target="_blank"><i class="fab fa-instagram"></i></a>
 			</li>
 		</ul>
-		<p>Designed and Developed by Henrique Salvador</p>
+		<p>Handcrafted using HTML, SASS and Javascript. 2019.</p>
 	</footer>
 </body>
 </html>
