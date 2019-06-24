@@ -266,17 +266,18 @@ header{
         font-weight: bold;
         text-decoration: none;
         color: $menu-grey-normal;
-        transition: all 0.3s;
 
         &.active{
           color: black;
 
           &:hover{
+            transition: 0.2s;
             color: black;
           }
         }
 
         &:hover{
+          transition: 0.2s;
           color: $menu-grey-hover;
         }
       }
