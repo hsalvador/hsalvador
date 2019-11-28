@@ -145,7 +145,11 @@ body{
 }
 
 main{
-  min-height: calc(100vh - 300px);
+  min-height: calc(100vh - 240px);
+
+  @include respond-above(md){
+    min-height: calc(100vh - 300px);
+  }
 }
 
 .container{
@@ -208,9 +212,9 @@ header{
   }
 
   @include respond-above(md){
-    padding: $large;
+    padding-top: $large;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    // grid-template-columns: 1fr 2fr;
     align-content: center;
     align-items: center;
     // justify-items: center;
@@ -228,6 +232,19 @@ header{
 
     @include respond-above(md){
       margin: 0;
+    }
+  }
+
+
+
+  .bar{
+    width: 60px;
+    height: 5px;
+    background-color: #3EEDA4;
+    margin-top: $medium-small;
+
+    @include respond-above(md){
+      margin-top: $medium-large;
     }
   }
 
@@ -286,6 +303,11 @@ header{
 
   h1{
     // margin-bottom: $medium-small;
+    font-family: ff-dax-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
 
     @include respond-above(sm){
       // margin-bottom: $medium-large
@@ -318,7 +340,7 @@ h1, h2, h3, h4, h5, h6{
 
 h1{
   font-size: 1.25em;
-  text-align: center;
+  text-align: left;
 }
 
 h2, h3{
@@ -400,16 +422,45 @@ h6{
 }
 
 .hero{
-  margin: $medium-small auto;
-  font-family: korolev, Helvetica, sans-serif;
+  // margin: $medium auto;
+  // font-family: korolev, Helvetica, sans-serif;
+  font-family: Roboto Condensed, Helvetica, sans-serif;
   font-weight: bold;
+
+  .social-media{
+    font-size: 1.5em;
+    margin-bottom: $medium;
+    display: flex;
+    margin-top: $medium;
+
+    li{
+      margin-right: $medium;
+    }
+    // display: grid;
+    // grid-template-columns: 1fr 1fr ;
+    // grid-template-rows: 1fr;
+    // grid-gap: $medium;
+
+    .instagram{
+      // justify-self: start;
+    }
+
+    .linkedin{
+      // justify-self: end;
+    }
+
+    a{
+      text-decoration: none;
+      color: $secondary-grey;
+    }
+  }
 
   &.contact{
     margin: $small auto;
   }
 
   @include respond-above(sm){
-    margin: $large auto;
+    // margin: $large auto;
 
     &.contact{
       margin: $medium-small auto;
@@ -488,10 +539,11 @@ h6{
   .hero-body{
     color: $secondary-grey;
     // text-transform: uppercase;
-    font-size: 1.2em;
-    text-align: center;
+    font-size: 1em;
+    // text-align: center;
+    text-align: left;
     max-width: 380px;
-    margin: -36px auto 0 auto;
+    // margin: -36px auto 0 auto;
     letter-spacing: 0.5px;
 
     &.contact{
@@ -499,9 +551,9 @@ h6{
     }
 
     @include respond-above(sm){
-      font-size: 1.825em;
-      max-width: 720px;
-      margin: -64px auto 0 auto;
+      font-size: 1em;
+      max-width: 500px;
+      // margin: -64px auto 0 auto;
 
       &.contact{
         margin: -30px auto 0 auto;
@@ -509,9 +561,9 @@ h6{
     }
 
     @include respond-above(md){
-      font-size: 2.225em;
-      max-width: 976px;
-      margin: -70px auto 0 auto;
+      font-size: 1em;
+      max-width: 500px;
+      // margin: -70px auto 0 auto;
 
       &.contact{
         margin: -40px auto 0 auto;
@@ -519,9 +571,9 @@ h6{
     }
 
     @include respond-above(lg){
-      max-width: 1220px;
-      font-size: 2.425em;
-      margin: -78px auto 0 auto;
+      max-width: 500px;
+      font-size: 1em;
+      // margin: -78px auto 0 auto;
 
       &.contact{
         margin: -60px auto 0 auto;
@@ -2197,27 +2249,5 @@ footer{
   p{
     text-align: center;
     font-size: 0.725em;
-  }
-
-  .social-media{
-    font-size: 1.5em;
-    margin-bottom: $medium;
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr;
-    grid-gap: $medium;
-
-    .instagram{
-      justify-self: start;
-    }
-
-    .linkedin{
-      justify-self: end;
-    }
-
-    a{
-      text-decoration: none;
-      color: $secondary-grey;
-    }
   }
 }
